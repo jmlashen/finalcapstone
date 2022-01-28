@@ -9,6 +9,11 @@
         "id": 2,
         "name": "Wendy Tate",
         "email": "wendy@zkhool.me"
+      },
+      {
+        "id": 2,
+        "name": "User",
+        "email": "user@zkhool.me"
       }
     ],
     "drill_logs": [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStopwatch } from 'react-timer-hook';
-import "../styles/timer.css"
+import "./styles/timer.css"
 import { Button } from 'bootstrap';
 
 
