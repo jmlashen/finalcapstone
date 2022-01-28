@@ -1,6 +1,8 @@
 import React from 'react';
 import { useStopwatch } from 'react-timer-hook';
 import "../styles/timer.css"
+import { Button } from 'bootstrap';
+
 
 export const MyStopwatch = () => {
     const {
@@ -18,8 +20,8 @@ export const MyStopwatch = () => {
     return (
 
         <>
+        <h1>Drill Type</h1>
         <div className='stopwatch-container'>
-        <h1></h1>
         <h2></h2>
         <div className='stopwatch'>
             <div className='stopwatch-time'>
@@ -28,8 +30,8 @@ export const MyStopwatch = () => {
         </div>
         <p>{isRunning ? 'Drill in progress' : 'Drill stopped'}</p>
         <button onClick={start}>Start</button>
-        <button onClick={pause}>Stop</button>
         <button onClick={reset}>Reset</button>
+        <button onClick={pause}>Stop</button>
         </div>
         
         
