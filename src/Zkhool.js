@@ -1,11 +1,10 @@
 import React from "react";
-import {MyStopwatch} from "./Timer"
-import { useState } from "react";
+import { ApplicationViews} from "./ApplicationViews"
 
 export const Zkhool = () => {
   return (
     <div>
-      <MyStopwatch />  
+      <ApplicationViews /> 
     </div>
   );
 }
