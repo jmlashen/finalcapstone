@@ -11,7 +11,7 @@
         "email": "wendy@zkhool.me"
       },
       {
-        "id": 2,
+        "id": 3,
         "name": "User",
         "email": "user@zkhool.me"
       }
@@ -33,16 +33,16 @@
     "drill_types": [
       {
         "id":1,
-        "tile": "Fire Drill"
+        "title": "Fire"
       },
       {
         "id":2,
-        "tile": "Torndao Drill"
+        "title": "Torndao"
        
       },
       {
         "id":3,
-        "tile": "Active Shooter Drill"
+        "title": "Active Shooter"
       }
     ],
     "contacts": [

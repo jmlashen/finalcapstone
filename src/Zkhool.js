@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Route } from "react-router";
 import { ApplicationViews } from "./ApplicationViews"
-import { Footer } from "./components/footer/Footer";
+
 
 export const Zkhool = () => {
 
@@ -23,10 +22,6 @@ export const Zkhool = () => {
 
     <>
       <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} clearUser={clearUser} />
-
-      <Route path="/">
-        {isAuthenticated ? <Footer clearUser={clearUser} isAuthenticated={isAuthenticated} /> : null}
-      </Route>
 
     </>
   );
