@@ -1,10 +1,10 @@
 import React from 'react';
 import { useStopwatch } from 'react-timer-hook';
-import "../styles/timer.css"
-import { Button } from 'bootstrap';
+import "./styles/timer.css"
 
 
-export const MyStopwatch = () => {
+
+export const Stopwatch = () => {
     const {
         seconds,
         minutes,
@@ -20,7 +20,7 @@ export const MyStopwatch = () => {
     return (
 
         <>
-        <h1>Drill Type</h1>
+        <h1>This is where the drill type is displayed after choosing the drill type</h1>
         <div className='stopwatch-container'>
         <h2></h2>
         <div className='stopwatch'>
