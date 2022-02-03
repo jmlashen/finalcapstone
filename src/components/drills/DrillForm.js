@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import { addDrill, getAllAdmins, getDrillTypeById } from '../../moduels/DrillManager';
+import { addDrill, getAllAdmins, getDrillTypeById, getDrillTypes } from '../../moduels/DrillManager';
 import { Stopwatch } from '../../Stopwatch';
 import { formatAMPM } from '../../utils/Date'
+import { DrillButton } from '../DrillButton';
 
 
 
@@ -37,19 +38,19 @@ export const DrillForm = () => {
 
 	
 
-	const handleControlledInputChange = (event) => {
+	// const handleControlledInputChange = (event) => {
 
-		const newDrill = { ...drill }
-		let selectedVal = event.target.value
+	// 	const newDrill = { ...drill }
+	// 	let selectedVal = event.target.value
 
-		if (event.target.id.includes("Id")) {
-			selectedVal = parseInt(selectedVal)
-		}
+	// 	if (event.target.id.includes("Id")) {
+	// 		selectedVal = parseInt(selectedVal)
+	// 	}
 
-		newDrill[event.target.id] = selectedVal
+	// 	newDrill[event.target.id] = selectedVal
 	
-		setDrill(newDrill)
-	}
+	// 	setDrill(newDrill)
+	// }
 
    
 
@@ -68,6 +69,7 @@ export const DrillForm = () => {
 	}
 
     useEffect(() => {
+
 	
         getAllAdmins().then(admins => {
             setAdmins(admins)
@@ -75,8 +77,9 @@ export const DrillForm = () => {
         getDrillTypeById(drillId).then(drillObj => {
             setDrillTypeObj(drillObj)
             console.log(drillTypeObj)
-        }); 
+        });
 
+        
 	}, []);
 
 return (
@@ -84,6 +87,8 @@ return (
     <>
     <h2 className="DrillForm__title">New {drillTypeObj.title} Drill</h2>
     <Stopwatch setStartTime={setStartTime} setEndTime={setEndTime}/>
+   
+    
     
     {/* <form className="DrillForm">
         <fieldset>

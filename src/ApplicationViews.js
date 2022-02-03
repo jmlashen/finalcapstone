@@ -26,6 +26,11 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
 
             </Route>
 
+            {/* <Route exact path="/drills/create/:drillId(\d+)">
+                <DrillList />
+
+            </Route> */}
+
             <Route exact path="/drills/create/:drillId(\d+)">
                 <DrillForm />
             </Route>

@@ -30,6 +30,182 @@
       "notes": "",
       "adminId": 1,
       "id": 8
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Wed Feb 02 2022 8:26 pm",
+      "end_time": "Wed Feb 02 2022 8:26 pm",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 9
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "2",
+      "conducted_byId": 3,
+      "start_time": "Wed Feb 02 2022 8:27 pm",
+      "end_time": "Wed Feb 02 2022 8:27 pm",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 10
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Wed Feb 02 2022 10:36 pm",
+      "end_time": "Wed Feb 02 2022 10:36 pm",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 11
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 9:24 am",
+      "end_time": "Thu Feb 03 2022 9:24 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 12
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 10:34 am",
+      "end_time": "Thu Feb 03 2022 10:34 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 13
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 10:38 am",
+      "end_time": "Thu Feb 03 2022 10:38 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 14
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 10:41 am",
+      "end_time": "Thu Feb 03 2022 10:41 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 15
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 10:43 am",
+      "end_time": "Thu Feb 03 2022 10:43 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 16
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "2",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 10:44 am",
+      "end_time": "Thu Feb 03 2022 10:44 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 17
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "3",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 10:44 am",
+      "end_time": "Thu Feb 03 2022 10:44 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 18
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 10:47 am",
+      "end_time": "Thu Feb 03 2022 10:47 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 19
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 10:53 am",
+      "end_time": "Thu Feb 03 2022 10:53 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 20
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 10:54 am",
+      "end_time": "Thu Feb 03 2022 10:54 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 21
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 11:06 am",
+      "end_time": "Thu Feb 03 2022 11:06 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 22
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 11:24 am",
+      "end_time": "Thu Feb 03 2022 11:24 am",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 23
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Thu Feb 03 2022 1:27 pm",
+      "end_time": "Thu Feb 03 2022 1:27 pm",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 24
     }
   ],
   "drill_types": [

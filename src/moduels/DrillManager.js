@@ -6,7 +6,7 @@ export const getDrillById = (drillId) => {
 }
 
 export const getAllDrills = () => {
-  return fetch(`${remoteURL}/drill_logs`)
+  return fetch(`${remoteURL}/drill_logs?_expand=drill_type`)
     .then(res => res.json())
 }
 
