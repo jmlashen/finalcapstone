@@ -27,7 +27,6 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
             </Route>
 
             <Route exact path="/drills/create/:drillId(\d+)">
-                <Stopwatch />
                 <DrillForm />
             </Route>
 
@@ -35,7 +34,7 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
                 <DrillEditForm />
             </Route> */}
 
-            <Route exact path="/">
+            <Route exact path="/home">
                 {isAuthenticated ? <Home /> : <Redirect to="/login" />}
             </Route>
 

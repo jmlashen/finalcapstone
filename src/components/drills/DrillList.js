@@ -33,7 +33,7 @@ export const DrillList = () => {
         <>
             <div>
                 
-                <Link to="/drills/create">MAKE BUTTON DRILL FORM.</Link>
+                <Link to="/drills"></Link>
                 {drills.map(drill =>
                     <DrillCard
                         key={drill.id}

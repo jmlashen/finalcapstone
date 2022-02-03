@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 
 
 export const Login = ({ setAuthUser }) => {
-    const [loginUser, setLoginUser] = useState({ email: "" })
+    const [loginUser, setLoginUser] = useState({ email: "", password: "" })
     const [existDialog, setExistDialog] = useState(false)
 
     const history = useHistory()
@@ -68,6 +68,18 @@ export const Login = ({ setAuthUser }) => {
                             onChange={handleInputChange} />
 
                     </fieldset>
+
+                    <fieldset>
+                        <label htmlFor="inputEmail"></label>
+                        <input type="password"
+                            id="password"
+                            className="form-control-login"
+                            placeholder="password"
+                            required autoFocus
+                            value={loginUser.password}
+                            onChange={handleInputChange} />
+
+                    </fieldset>
                     <div>
                         <button type="submit">
                             Sign in
@@ -77,10 +89,10 @@ export const Login = ({ setAuthUser }) => {
                     <section>
 
                         <div>
-                            <div><h6>not signed up?</h6></div>
+                            {/* <div><h6>not signed up?</h6></div>
                             <div>
                                 <Link to="/register"><h6>Register for an account</h6></Link>
-                            </div>
+                            </div> */}
                         </div>
                     </section>
                 </form>

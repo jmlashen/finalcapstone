@@ -10,10 +10,10 @@ export const DrillCard = ({ drill, handleDeleteDrill }) => {
         <Link to={`/drills/${drill.id}`}>
         <div>
 
-            <h1>{(drill.drill_date)}</h1>
-            <h1>{drill.start_time}</h1>
-            <h1>{drill.end_time}</h1>
-            <h1>{drill.light_check}</h1>
+            <p>{(drill.drill_date)}</p>
+            <p>{drill.start_time}</p>
+            <p>{drill.end_time}</p>
+            <p>{drill.light_check}</p>
             
             <button type="button"
                 onClick={() => history.push(`/drills/${drill.id}/edit`)}>
