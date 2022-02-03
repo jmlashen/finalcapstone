@@ -27,7 +27,7 @@ export const update = (editedDrill) => {
 }
 
 export const addDrill = (newDrill) => {
-  return fetch(`${remoteURL}/drills`, {
+  return fetch(`${remoteURL}/drill_logs`, {
       method: "POST",
       headers: {
           "Content-Type": "application/json"
@@ -52,3 +52,12 @@ export const getDrillTypeById = (id) => {
     .then(res => res.json())
 }
 
+export const addDrills = (drill) => {
+  return fetch(`${remoteURL}/drill_logs`, {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(drill)
+  }).then(response => response.json())
+}

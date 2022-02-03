@@ -2,6 +2,8 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
+import { WeatherCard } from "../../WeatherCard";
+import { GetUser } from "./GetUser";
 
 export const NavBarZ = ({ clearUser, isAuthenticated }) => {
 
@@ -17,23 +19,34 @@ export const NavBarZ = ({ clearUser, isAuthenticated }) => {
             return false
         }
     }
+
+
     return (
         <>
             <Navbar>
                 <Nav>
-                {isAuthenticated ?
-                    <Link to="/"><h1>home</h1></Link>
-                    : null}
+                    {isAuthenticated ?
+                        <Link to="/home"><h1>home</h1></Link>
+                        : null}
 
-                {isAuthenticated ?
-                    <Link to="/drills">drills</Link>
-                    : null}
-                {isAuthenticated ?    
-                    <Link to="/contacts">contacts</Link>
-                    : null}
-                {isAuthenticated ? 
-                    <button onClick={handleLogout}>Logout</button>
-                    : null}
+                    {isAuthenticated ?
+                        <Link to="/drills"><h1>drills</h1></Link>
+                        : null}
+                    {isAuthenticated ?
+                        <Link to="/contacts"><h1>contacts</h1></Link>
+                        : null}
+                    {isAuthenticated ?
+                        <button onClick={handleLogout}>Logout</button>
+                        : null}
+
+                    <div>
+                        <WeatherCard />
+                    </div>
+
+                    <div className="get">
+                        <GetUser />
+                    </div>
+
                 </Nav>
             </Navbar>
         </>

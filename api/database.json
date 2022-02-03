@@ -1,114 +1,138 @@
 {
-    "admins": [
-      {
-        "id": 1,
-        "name": "Cynthia White",
-        "email": "cynthia@zkhool.me"
-      },
-      {
-        "id": 2,
-        "name": "Wendy Tate",
-        "email": "wendy@zkhool.me"
-      },
-      {
-        "id": 3,
-        "name": "User",
-        "email": "user@zkhool.me"
-      }
-    ],
-    "drill_logs": [
-      {
-        "drill_date": "2020-06-07",
-        "drill_typeId": 1,
-        "conducted_byId": 8,
-        "start_time": "9:00am",
-        "end_time": "9:03am",
-        "light_check": "Yes",
-        "notes": "Drill went great!",
-        "adminId":1,
-        "id": 1
-      }
-
-    ],
-    "drill_types": [
-      {
-        "id":1,
-        "title": "Fire"
-      },
-      {
-        "id":2,
-        "title": "Torndao"
-       
-      },
-      {
-        "id":3,
-        "title": "Active Shooter"
-      }
-    ],
-    "contacts": [
-        {
-            "id":1,
-            "title": "Fire Department",
-            "phone": "+1.615.862.5421"
-        },
-        {
-            "id":2,
-            "title": "Police",
-            "phone": "+1.615.862.8600"
-        },
-        {
-            "id":3,
-            "title": "Posion Control",
-            "phone": "+1.615.322.6435"
-        },
-        {
-            "id":4,
-            "title": "Red Cross",
-            "phone": "+1.615.250.4300"
-        },
-        {
-            "id":5,
-            "title": "Disaster Services",
-            "phone": "+1.615.327.1931"
-        },
-        {
-            "id":6,
-            "title": "National Guard",
-            "phone": "+1.615.313-0709"
-        },
-        {
-            "id":7,
-            "title": "FBI",
-            "phone": "+1.615.741.0430"
-        },
-        {
-            "id":8,
-            "title": "DCS",
-            "phone": "+1.877.237.0004"
-        },
-        {
-            "id":9,
-            "title": "DHS",
-            "phone": "+1.800.462.8261"
-        },
-        {
-            "id":10,
-            "title": "Vanderbilt Hostpital",
-            "phone": "+1.615.322.5000"
-        },   {
-            "id":7,
-            "title": "TN Emergency Management",
-            "phone": "+1.615.253.1336"
-        },
-        {
-            "id":11,
-            "title": "Ambulance",
-            "phone": "+911"
-        },
-        {
-            "id":12,
-            "title": "Rescue Squad",
-            "phone": "+1.615.226.0462"
-        }
-    ]
-  }
+  "admins": [
+    {
+      "id": 1,
+      "name": "Cynthia White",
+      "email": "cynthia@zkhool.me",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "name": "Wendy Tate",
+      "email": "wendy@zkhool.me",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "name": "User",
+      "email": "user@zkhool.me",
+      "password": "1234567"
+    }
+  ],
+  "drill_logs": [
+    {
+      "drill_date": "2020-06-07",
+      "drill_typeId": 1,
+      "conducted_byId": 8,
+      "start_time": "9:00am",
+      "end_time": "9:03am",
+      "light_check": "Yes",
+      "notes": "Drill went great!",
+      "adminId": 1,
+      "id": 1
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Wed Feb 02 2022 6:54 pm",
+      "end_time": "",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 6
+    },
+    {
+      "drill_date": "",
+      "drill_typeId": "1",
+      "conducted_byId": 3,
+      "start_time": "Wed Feb 02 2022 6:58 pm",
+      "end_time": "Wed Feb 02 2022 6:58 pm",
+      "light_check": "",
+      "notes": "",
+      "adminId": 1,
+      "id": 7
+    }
+  ],
+  "drill_types": [
+    {
+      "id": 1,
+      "title": "Fire"
+    },
+    {
+      "id": 2,
+      "title": "Torndao"
+    },
+    {
+      "id": 3,
+      "title": "Active Shooter"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "title": "Fire Department",
+      "phone": "+1.615.862.5421"
+    },
+    {
+      "id": 2,
+      "title": "Police",
+      "phone": "+1.615.862.8600"
+    },
+    {
+      "id": 3,
+      "title": "Posion Control",
+      "phone": "+1.615.322.6435"
+    },
+    {
+      "id": 4,
+      "title": "Red Cross",
+      "phone": "+1.615.250.4300"
+    },
+    {
+      "id": 5,
+      "title": "Disaster Services",
+      "phone": "+1.615.327.1931"
+    },
+    {
+      "id": 6,
+      "title": "National Guard",
+      "phone": "+1.615.313-0709"
+    },
+    {
+      "id": 7,
+      "title": "FBI",
+      "phone": "+1.615.741.0430"
+    },
+    {
+      "id": 8,
+      "title": "DCS",
+      "phone": "+1.877.237.0004"
+    },
+    {
+      "id": 9,
+      "title": "DHS",
+      "phone": "+1.800.462.8261"
+    },
+    {
+      "id": 10,
+      "title": "Vanderbilt Hostpital",
+      "phone": "+1.615.322.5000"
+    },
+    {
+      "id": 7,
+      "title": "TN Emergency Management",
+      "phone": "+1.615.253.1336"
+    },
+    {
+      "id": 11,
+      "title": "Ambulance",
+      "phone": "+911"
+    },
+    {
+      "id": 12,
+      "title": "Rescue Squad",
+      "phone": "+1.615.226.0462"
+    }
+  ]
+}

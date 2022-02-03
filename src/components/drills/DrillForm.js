@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { addDrill, getAllAdmins, getDrillTypeById } from '../../moduels/DrillManager';
+import { Stopwatch } from '../../Stopwatch';
+import { formatAMPM } from '../../utils/Date'
+
+
 
 export const DrillForm = () => {
     const history = useHistory();
@@ -10,7 +14,8 @@ export const DrillForm = () => {
         id:0, 
         title: ""
     });
-
+    const [startTime, setStartTime] = useState (null)
+    const [endTime, setEndTime] = useState (null)
 
     console.log("drill type from use params is ", drillId)
 
@@ -46,8 +51,11 @@ export const DrillForm = () => {
 		setDrill(newDrill)
 	}
 
+   
 
 	const handleClickSaveDrill = (event) => {
+        if (startTime != null) {drill.start_time = formatAMPM(startTime)}
+        if (endTime != null) {drill.end_time = formatAMPM(endTime)}
 		event.preventDefault() //Prevents the browser from submitting the form
 
 		if (drill.drill_date === 0 || drill.drill_typeId === 0 || drill.start_time === 0 || drill.end_time === 0 || drill.light_check === 0 ) {
@@ -55,7 +63,7 @@ export const DrillForm = () => {
 		} else {
 		
 			addDrill(drill)
-				.then(() => history.push("/drills"))
+				.then(() => history.push("/drill_logs"))
 		}
 	}
 
@@ -73,51 +81,51 @@ export const DrillForm = () => {
 
 return (
 
+    <>
+    <h2 className="DrillForm__title">New {drillTypeObj.title} Drill</h2>
+    <Stopwatch setStartTime={setStartTime} setEndTime={setEndTime}/>
     
-    <form className="DrillForm">
-        <h2 className="DrillForm__title">New {drillTypeObj.title} Drill</h2>
+    {/* <form className="DrillForm">
         <fieldset>
             <div className="form-group">
-                <label htmlFor="Drill Date">Drill name:</label>
-                <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Drill Date" value={drill.drill_date} />
+                <label htmlFor="Drill Date">Drill Date:</label>
+                <input type="date" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Drill Date" value={drill.drill_date} />
             </div>
         </fieldset>
-        {/* <fieldset>
-            <div className="form-group">
-                <label htmlFor="breed">Drill breed:</label>
-                <input type="text" id="breed" onChange={handleControlledInputChange} required className="form-control" placeholder="Drill breed" value={drill.breed} />
-            </div>
-        </fieldset>
+
         <fieldset>
             <div className="form-group">
-                <label htmlFor="light_check">Assign to location: </label>
-                <select value={light_check.drillId} name="locationId" id="locationId" onChange={handleControlledInputChange} className="form-control" >
-                    <option value="0">Select a location</option>
-                    {locations.map(l => (
-                        <option key={l.id} value={l.id}>
-                            {l.name}
-                        </option>
-                    ))}
+                <label htmlFor="Drill Date">Start Time:</label>
+                <input type="time" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Start Time" value={drill.start_time} />
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div className="form-group">
+                <label htmlFor="Drill Date">End Time:</label>
+                <input type="time" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Start Time" value={drill.end_time} />
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div className="form-group">
+                <label htmlFor="light_check">Light Check?</label>
+                <select value={drill.light_check} id="name" onChange={handleControlledInputChange} className="form-control" >
+                <option value="0"></option>
+                    <option value="0">Yes</option>
+                        <option value="1">Reported Not Working</option>
                 </select>
             </div>
         </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="customerId">Customer: </label>
-                <select value={drill.customerId} name="customer" id="customerId" onChange={handleControlledInputChange} className="form-control" >
-                    <option value="0">Select a customer</option>
-                    {customers.map(c => (
-                        <option key={c.id} value={c.id}>
-                            {c.name}
-                        </option>
-                    ))}
-                </select>
-            </div>
-        </fieldset> */}
-        <button className="btn btn-primary"
+
+       
+    </form> */}
+
+    <button className="btn btn-primary"
             onClick={handleClickSaveDrill}>
             Save Drill
       </button>
-    </form>
+
+    </>
 )
 };

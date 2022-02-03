@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStopwatch } from 'react-timer-hook';
 import "./styles/timer.css"
 
 
 
-export const Stopwatch = () => {
+export const Stopwatch = ({setStartTime, setEndTime}) => {
+   
+
+    
     const {
         seconds,
         minutes,
@@ -16,11 +19,21 @@ export const Stopwatch = () => {
         reset,
     } = useStopwatch({ autoStart: false });
 
+    const handleStart = () => {
+        start()
+        setStartTime(Date.now())
+
+    }
+
+    const handleStop = () => {
+        pause()
+        setEndTime(Date.now())
+    } 
 
     return (
 
         <>
-        <h1>This is where the drill type is displayed after choosing the drill type</h1>
+        
         <div className='stopwatch-container'>
         <h2></h2>
         <div className='stopwatch'>
@@ -29,9 +42,9 @@ export const Stopwatch = () => {
             </div>
         </div>
         <p>{isRunning ? 'Drill in progress' : 'Drill stopped'}</p>
-        <button onClick={start}>Start</button>
+        <button onClick={handleStart}>Start</button>
         <button onClick={reset}>Reset</button>
-        <button onClick={pause}>Stop</button>
+        <button onClick={handleStop}>Stop</button>
         </div>
         
         
