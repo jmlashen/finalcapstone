@@ -4,73 +4,72 @@ import { addDrill, getAllAdmins, getDrillTypeById, getDrillTypes } from '../../m
 import { Stopwatch } from '../../Stopwatch';
 import { formatAMPM } from '../../utils/Date'
 import { DrillButton } from '../DrillButton';
-
+import { completeLightCheck } from '../../moduels/DrillManager';
 
 
 export const DrillForm = () => {
     const history = useHistory();
-    const {drillId} = useParams();
+    const { drillId } = useParams();
     const [admins, setAdmins] = useState([]);
     const [drillTypeObj, setDrillTypeObj] = useState({
-        id:0, 
+        id: 0,
         title: ""
     });
-    const [startTime, setStartTime] = useState (null)
-    const [endTime, setEndTime] = useState (null)
+    const [startTime, setStartTime] = useState(null)
+    const [endTime, setEndTime] = useState(null)
 
     console.log("drill type from use params is ", drillId)
 
     let user = parseInt(sessionStorage.getItem("zkhool_user"))
-	const [drill, setDrill] = useState({
-		drill_date: "",
-		drill_typeId: drillId,
-		conducted_byId: user,
-		start_time: "",
-        end_time:"",
-        light_check:"",
-        notes:"",
-        adminId:1,
-	});
+    const [drill, setDrill] = useState({
+        drill_typeId: drillId,
+        adminId: user,
+        start_time: "",
+        end_time: "",
+        light_check_status: false,
+        notes: "",
+
+    });
 
 
 
-	
+    const handleControlledInputChange = (event) => {
 
-	
+    	const newDrill = { ...drill }
+    	let selectedVal = event.target.value
 
-	// const handleControlledInputChange = (event) => {
+    	if (event.target.id.includes("Id")) {
+    		selectedVal = parseInt(selectedVal)
+    	}
 
-	// 	const newDrill = { ...drill }
-	// 	let selectedVal = event.target.value
+    	newDrill[event.target.id] = selectedVal
 
-	// 	if (event.target.id.includes("Id")) {
-	// 		selectedVal = parseInt(selectedVal)
-	// 	}
+    	setDrill(newDrill)
+    }
 
-	// 	newDrill[event.target.id] = selectedVal
-	
-	// 	setDrill(newDrill)
-	// }
+    const handleCheckBoxClick = (event) => {
+        const newDrill = { ...drill, light_check_status:event.target.checked }
+        setDrill(newDrill)
+    }
 
-   
 
-	const handleClickSaveDrill = (event) => {
-        if (startTime != null) {drill.start_time = formatAMPM(startTime)}
-        if (endTime != null) {drill.end_time = formatAMPM(endTime)}
-		event.preventDefault() //Prevents the browser from submitting the form
+    const handleClickSaveDrill = (event) => {
+        if (startTime != null) { drill.start_time = formatAMPM(startTime) }
+        if (endTime != null) { drill.end_time = formatAMPM(endTime) }
+        event.preventDefault() //Prevents the browser from submitting the form
 
-		if (drill.drill_date === 0 || drill.drill_typeId === 0 || drill.start_time === 0 || drill.end_time === 0 || drill.light_check === 0 ) {
-			window.alert("Please complete entire form")
-		} else {
-		
-			addDrill(drill)
-				.then(() => history.push("/drills"))
-		}
-	}
+        if ( drill.drill_typeId === 0 || drill.start_time === 0 || drill.end_time === 0 || drill.light_check_status === false) {
+            window.alert("Please complete entire form")
+        } else {
+
+            addDrill(drill)
+                .then(() => history.push("/drills"))
+        }
+    }
 
     useEffect(() => {
 
-	
+
         getAllAdmins().then(admins => {
             setAdmins(admins)
         })
@@ -79,58 +78,31 @@ export const DrillForm = () => {
             console.log(drillTypeObj)
         });
 
-        
-	}, []);
 
-return (
+    }, []);
 
-    <>
-    <h2 className="DrillForm__title">New {drillTypeObj.title} Drill</h2>
-    <Stopwatch setStartTime={setStartTime} setEndTime={setEndTime}/>
-   
-    
-    
-    {/* <form className="DrillForm">
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="Drill Date">Drill Date:</label>
-                <input type="date" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Drill Date" value={drill.drill_date} />
+
+    return (
+
+        <>
+            <Stopwatch setStartTime={setStartTime} setEndTime={setEndTime} />
+
+            <div>
+                <label htmlFor="notes">Notes:</label>
+                <textarea className="form-notes" type="text" id="notes" onChange={handleControlledInputChange} placeholder="notes" value={drill.notes} />
             </div>
-        </fieldset>
 
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="Drill Date">Start Time:</label>
-                <input type="time" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Start Time" value={drill.start_time} />
-            </div>
-        </fieldset>
+            <div>
+                    <input className="checkbox" onChange={handleCheckBoxClick} value={drill.light_check_status} type="checkbox" id="light_check_status"></input>
+                    <label className="checkLabel" htmlFor="check">completed</label>
+                </div>
 
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="Drill Date">End Time:</label>
-                <input type="time" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Start Time" value={drill.end_time} />
-            </div>
-        </fieldset>
 
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="light_check">Light Check?</label>
-                <select value={drill.light_check} id="name" onChange={handleControlledInputChange} className="form-control" >
-                <option value="0"></option>
-                    <option value="0">Yes</option>
-                        <option value="1">Reported Not Working</option>
-                </select>
-            </div>
-        </fieldset>
+            <button className="btn btn-primary"
+                onClick={handleClickSaveDrill}>
+                Save Drill
+            </button>
 
-       
-    </form> */}
-
-    <button className="btn btn-primary"
-            onClick={handleClickSaveDrill}>
-            Save Drill
-      </button>
-
-    </>
-)
+        </>
+    )
 };
