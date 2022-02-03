@@ -21,37 +21,15 @@
   ],
   "drill_logs": [
     {
-      "drill_date": "2020-06-07",
-      "drill_typeId": 1,
-      "conducted_byId": 8,
-      "start_time": "9:00am",
-      "end_time": "9:03am",
-      "light_check": "Yes",
-      "notes": "Drill went great!",
-      "adminId": 1,
-      "id": 1
-    },
-    {
       "drill_date": "",
       "drill_typeId": "1",
       "conducted_byId": 3,
-      "start_time": "Wed Feb 02 2022 6:54 pm",
-      "end_time": "",
+      "start_time": "Wed Feb 02 2022 7:11 pm",
+      "end_time": "Wed Feb 02 2022 7:11 pm",
       "light_check": "",
       "notes": "",
       "adminId": 1,
-      "id": 6
-    },
-    {
-      "drill_date": "",
-      "drill_typeId": "1",
-      "conducted_byId": 3,
-      "start_time": "Wed Feb 02 2022 6:58 pm",
-      "end_time": "Wed Feb 02 2022 6:58 pm",
-      "light_check": "",
-      "notes": "",
-      "adminId": 1,
-      "id": 7
+      "id": 8
     }
   ],
   "drill_types": [

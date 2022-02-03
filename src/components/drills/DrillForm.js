@@ -63,7 +63,7 @@ export const DrillForm = () => {
 		} else {
 		
 			addDrill(drill)
-				.then(() => history.push("/drill_logs"))
+				.then(() => history.push("/drills"))
 		}
 	}
 
