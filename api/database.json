@@ -2,13 +2,13 @@
   "admins": [
     {
       "id": 1,
-      "name": "Cynthia White",
+      "name": "Cynthia",
       "email": "cynthia@zkhool.me",
       "password": "12345"
     },
     {
       "id": 2,
-      "name": "Wendy Tate",
+      "name": "Wendy",
       "email": "wendy@zkhool.me",
       "password": "123456"
     },
@@ -21,15 +21,77 @@
   ],
   "drill_logs": [
     {
-      "drill_date": "",
       "drill_typeId": "1",
-      "conducted_byId": 3,
-      "start_time": "Wed Feb 02 2022 7:11 pm",
-      "end_time": "Wed Feb 02 2022 7:11 pm",
-      "light_check": "",
+      "adminId": 2,
+      "start_time": "Thu Feb 03 2022 3:01 pm",
+      "end_time": "Thu Feb 03 2022 3:01 pm",
+      "light_check_status": "false",
+      "notes": "sd",
+      "id": 33
+    },
+    {
+      "drill_typeId": "1",
+      "adminId": 2,
+      "start_time": "Thu Feb 03 2022 3:06 pm",
+      "end_time": "Thu Feb 03 2022 3:06 pm",
+      "light_check_status": "false",
+      "notes": "sda",
+      "id": 34
+    },
+    {
+      "drill_typeId": "1",
+      "adminId": 2,
+      "start_time": "Thu Feb 03 2022 4:18 pm",
+      "end_time": "Thu Feb 03 2022 4:19 pm",
+      "light_check_status": false,
+      "notes": "fgdf",
+      "id": 35
+    },
+    {
+      "drill_typeId": "1",
+      "adminId": 2,
+      "start_time": "Thu Feb 03 2022 4:23 pm",
+      "end_time": "Thu Feb 03 2022 4:23 pm",
+      "light_check_status": false,
+      "notes": "b",
+      "check": "false",
+      "id": 36
+    },
+    {
+      "drill_typeId": "1",
+      "adminId": 2,
+      "start_time": "Thu Feb 03 2022 4:24 pm",
+      "end_time": "Thu Feb 03 2022 4:24 pm",
+      "light_check_status": "false",
+      "notes": "d",
+      "id": 37
+    },
+    {
+      "drill_typeId": "1",
+      "adminId": 2,
+      "start_time": "Thu Feb 03 2022 4:27 pm",
+      "end_time": "Thu Feb 03 2022 4:27 pm",
+      "light_check_status": false,
       "notes": "",
-      "adminId": 1,
-      "id": 8
+      "id": 38
+    },
+    {
+      "drill_typeId": "1",
+      "adminId": 2,
+      "start_time": "Thu Feb 03 2022 4:51 pm",
+      "end_time": "Thu Feb 03 2022 4:51 pm",
+      "light_check_status": true,
+      "notes": "df",
+      "id": 39
+    },
+    {
+      "drill_typeId": "1",
+      "adminId": 2,
+      "start_time": "Thu Feb 03 2022 4:52 pm",
+      "end_time": "Thu Feb 03 2022 4:52 pm",
+      "light_check_status": true,
+      "notes": "df",
+      "id": 40
     }
   ],
   "drill_types": [

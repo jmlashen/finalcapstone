@@ -32,14 +32,16 @@ export const DrillList = () => {
 
         <>
             <div>
-                
-                <Link to="/drills"></Link>
-                {drills.map(drill =>
-                    <DrillCard
-                        key={drill.id}
-                        drill={drill}
-                        handleDeleteDrill={handleDeleteDrill} />)}
-                        
+
+                <Link to="/create">
+                    {drills.map(drill =>
+                        <DrillCard
+                            key={drill.id}
+                            drill={drill}
+                            handleDeleteDrill={handleDeleteDrill} />)}
+
+                </Link>
+
             </div>
 
 

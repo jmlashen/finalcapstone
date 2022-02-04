@@ -30,7 +30,7 @@ export const Login = ({ setAuthUser }) => {
             .then(exists => {
                 if (exists) {
                     setAuthUser(exists)
-                    history.push("/")
+                    history.push("/home")
                 } else {
                     setExistDialog(true)
                 }

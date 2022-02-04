@@ -8,6 +8,8 @@ export const DrillButton = ({drillType}) => {
         <Link to={`drills/create/${drillType.id}`}>
         <button>{drillType.title}</button>
         </Link>
+
+        
         </>
     )
 }
