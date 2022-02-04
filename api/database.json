@@ -23,15 +23,6 @@
     {
       "drill_typeId": "1",
       "adminId": 2,
-      "start_time": "Thu Feb 03 2022 3:01 pm",
-      "end_time": "Thu Feb 03 2022 3:01 pm",
-      "light_check_status": "false",
-      "notes": "sd",
-      "id": 33
-    },
-    {
-      "drill_typeId": "1",
-      "adminId": 2,
       "start_time": "Thu Feb 03 2022 3:06 pm",
       "end_time": "Thu Feb 03 2022 3:06 pm",
       "light_check_status": "false",
@@ -60,38 +51,11 @@
     {
       "drill_typeId": "1",
       "adminId": 2,
-      "start_time": "Thu Feb 03 2022 4:24 pm",
-      "end_time": "Thu Feb 03 2022 4:24 pm",
-      "light_check_status": "false",
-      "notes": "d",
-      "id": 37
-    },
-    {
-      "drill_typeId": "1",
-      "adminId": 2,
-      "start_time": "Thu Feb 03 2022 4:27 pm",
-      "end_time": "Thu Feb 03 2022 4:27 pm",
-      "light_check_status": false,
+      "start_time": "Fri Feb 04 2022 2:03 pm",
+      "end_time": "Fri Feb 04 2022 2:03 pm",
+      "light_check_status": true,
       "notes": "",
-      "id": 38
-    },
-    {
-      "drill_typeId": "1",
-      "adminId": 2,
-      "start_time": "Thu Feb 03 2022 4:51 pm",
-      "end_time": "Thu Feb 03 2022 4:51 pm",
-      "light_check_status": true,
-      "notes": "df",
-      "id": 39
-    },
-    {
-      "drill_typeId": "1",
-      "adminId": 2,
-      "start_time": "Thu Feb 03 2022 4:52 pm",
-      "end_time": "Thu Feb 03 2022 4:52 pm",
-      "light_check_status": true,
-      "notes": "df",
-      "id": 40
+      "id": 37
     }
   ],
   "drill_types": [
@@ -160,17 +124,17 @@
       "phone": "+1.615.322.5000"
     },
     {
-      "id": 7,
+      "id": 11,
       "title": "TN Emergency Management",
       "phone": "+1.615.253.1336"
     },
     {
-      "id": 11,
+      "id": 12,
       "title": "Ambulance",
       "phone": "+911"
     },
     {
-      "id": 12,
+      "id": 13,
       "title": "Rescue Squad",
       "phone": "+1.615.226.0462"
     }

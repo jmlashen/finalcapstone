@@ -13,7 +13,8 @@ export const DrillCard = ({ drill, handleDeleteDrill }) => {
 
     
     return (
-        <Link to={`/drills/${drill.id}`}>
+        <>
+        {/* <Link to={`/drills/${drill.id}`}></Link> */}
         <div>
             <h1>{(drill.drill_type.title)} Drill</h1>
             <h3>Drill stared:</h3><p>{drill.start_time}</p>
@@ -32,7 +33,7 @@ export const DrillCard = ({ drill, handleDeleteDrill }) => {
                 Delete
             </button>
         </div>
-        </Link>
+        </>
     )
 }
 

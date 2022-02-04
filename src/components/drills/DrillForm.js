@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import { addDrill, getAllAdmins, getDrillTypeById, getDrillTypes } from '../../moduels/DrillManager';
+import { addDrill, getAllAdmins, getDrillTypeById} from '../../moduels/DrillManager';
 import { Stopwatch } from '../../Stopwatch';
 import { formatAMPM } from '../../utils/Date'
-import { DrillButton } from '../DrillButton';
-import { completeLightCheck } from '../../moduels/DrillManager';
+
 
 
 export const DrillForm = () => {
@@ -88,7 +87,7 @@ export const DrillForm = () => {
             <Stopwatch setStartTime={setStartTime} setEndTime={setEndTime} />
 
             <div>
-                <label htmlFor="notes">Notes:</label>
+                <label htmlFor="notes"></label>
                 <textarea className="form-notes" type="text" id="notes" onChange={handleControlledInputChange} placeholder="notes" value={drill.notes} />
             </div>
 
