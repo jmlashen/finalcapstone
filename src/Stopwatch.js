@@ -6,7 +6,7 @@ import "./styles/timer.css"
 
 export const Stopwatch = ({setStartTime, setEndTime}) => {
    
-
+   
     
     const {
         seconds,
@@ -18,6 +18,13 @@ export const Stopwatch = ({setStartTime, setEndTime}) => {
         pause,
         reset,
     } = useStopwatch({ autoStart: false });
+    
+    // const calcTime = () => {
+    //     return seconds + 60*minutes + 3600 * hours
+
+    // }
+    // const [time, setTime] = useState(calcTime())
+
 
     const handleStart = () => {
         start()
@@ -29,6 +36,16 @@ export const Stopwatch = ({setStartTime, setEndTime}) => {
         pause()
         setEndTime(Date.now())
     } 
+
+   
+    const handleReset = () => {
+        reset()
+        handleStop()
+      
+    }
+
+
+    
 
     return (
 
@@ -43,7 +60,7 @@ export const Stopwatch = ({setStartTime, setEndTime}) => {
         </div>
         <p>{isRunning ? 'Drill in progress' : 'Drill stopped'}</p>
         <button onClick={handleStart}>Start</button>
-        <button onClick={reset}>Reset</button>
+        <button onClick={handleReset}>Reset</button>
         <button onClick={handleStop}>Stop</button>
         </div>
         

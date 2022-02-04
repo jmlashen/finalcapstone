@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { getAllContacts } from "./moduels/ContactsManager";
+import { getAllContacts } from "../../moduels/ContactsManager";
+import { ContactCard } from "./ContactCard";
 
 export const Contacts = () => {
     const [contacts, setContacts] = useState([])
@@ -16,11 +17,7 @@ export const Contacts = () => {
 
     return (
         <>
-            {contacts.map(data => <p>{data.title}{data.phone}</p>)}
-            {/* {contacts.map(data => <h2>{data.phone}</h2>)} */}
-        
-           
-
+            {contacts.map(contact => <ContactCard key={contact.id} contact={contact}/>)}
         </>
     )
 
