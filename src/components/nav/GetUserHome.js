@@ -1,7 +1,5 @@
 import React from "react"
 
-
-
 export const GetUserHome = () => {
     let user = sessionStorage.getItem("zkhool_username")
     console.log(user)
