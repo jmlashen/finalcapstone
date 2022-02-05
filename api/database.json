@@ -37,6 +37,42 @@
       "end_time": "Fri Feb 04 2022 6:15 pm",
       "light_check_status": true,
       "notes": "asddasdasassddasdasdasdas"
+    },
+    {
+      "id": 3,
+      "drill_typeId": 1,
+      "adminId": 2,
+      "start_time": "Fri Feb 04 2022 6:18 pm",
+      "end_time": "Fri Feb 04 2022 6:19 pm",
+      "light_check_status": true,
+      "notes": "sdasddddddddd"
+    },
+    {
+      "id": 4,
+      "drill_typeId": 1,
+      "adminId": 2,
+      "start_time": "Fri Feb 04 2022 6:20 pm",
+      "end_time": "Fri Feb 04 2022 6:20 pm",
+      "light_check_status": true,
+      "notes": "gfgfgfgtttttt"
+    },
+    {
+      "id": 5,
+      "drill_typeId": 2,
+      "adminId": 2,
+      "start_time": "Fri Feb 04 2022 6:20 pm",
+      "end_time": "Fri Feb 04 2022 6:20 pm",
+      "light_check_status": true,
+      "notes": "dsdsd"
+    },
+    {
+      "id": 6,
+      "drill_typeId": 3,
+      "adminId": 2,
+      "start_time": "Fri Feb 04 2022 6:20 pm",
+      "end_time": "Fri Feb 04 2022 6:21 pm",
+      "light_check_status": true,
+      "notes": "hjkhjkhjkhjkhjkhj"
     }
   ],
   "drill_types": [

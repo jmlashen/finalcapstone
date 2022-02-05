@@ -11,7 +11,7 @@ export const DrillEditForm = () => {
 
     const [drill, setDrill] = useState({
 
-        drill_typeId: "",
+        drill_typeId: 0,
         adminId: "",
         start_time: "",
         end_time: "",
