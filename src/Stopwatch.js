@@ -18,12 +18,6 @@ export const Stopwatch = ({setStartTime, setEndTime}) => {
         pause,
         reset,
     } = useStopwatch({ autoStart: false });
-    
-    // const calcTime = () => {
-    //     return seconds + 60*minutes + 3600 * hours
-
-    // }
-    // const [time, setTime] = useState(calcTime())
 
 
     const handleStart = () => {
@@ -44,9 +38,6 @@ export const Stopwatch = ({setStartTime, setEndTime}) => {
       
     }
 
-
-    
-
     return (
 
         <>
@@ -66,11 +57,6 @@ export const Stopwatch = ({setStartTime, setEndTime}) => {
         
         
         </>
-
-
-
-
-
 
 
     );

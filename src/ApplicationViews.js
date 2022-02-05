@@ -10,6 +10,8 @@ import { Register } from "./components/auth/Register";
 import { DrillForm } from "./components/drills/DrillForm";
 import { Footer } from "./components/footer/Footer";
 import { Contacts } from "./components/contacts/Contacts";
+import { DrillEditForm } from "./components/drills/DrillEditForm";
+
 
 
 export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) => {
@@ -35,9 +37,9 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
                 <DrillForm />
             </Route>
 
-            {/* <Route exact path="/drills/:drillId(\d+)/edit">
+            <Route exact path="/drills/:drillId(\d+)/edit">
                 <DrillEditForm />
-            </Route> */}
+            </Route>
 
             <Route exact path="/home">
                 {isAuthenticated ? <Home /> : <Redirect to="/login" />}

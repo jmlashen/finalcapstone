@@ -6,7 +6,7 @@ export const getDrillById = (drillId) => {
 }
 
 export const getAllDrills = () => {
-  return fetch(`${remoteURL}/drill_logs?_expand=drill_type&_expand=admin`)
+  return fetch(`${remoteURL}/drill_logs?_expand=drill_type&_expand=admin&_sort=id&_order=desc`)
     .then(res => res.json())
 }
 
@@ -16,13 +16,13 @@ export const deleteDrill = (id) => {
   }).then(result => result.json())
 }
 
-export const update = (editedDrill) => {
-  return fetch(`${remoteURL}/drills/${editedDrill.id}`, {
+export const updateDrill = (drillObj) => {
+  return fetch(`${remoteURL}/drill_logs/${drillObj.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(editedDrill)
+    body: JSON.stringify(drillObj)
   }).then(data => data.json());
 }
 

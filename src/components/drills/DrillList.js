@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
-import { Link } from 'react-router-dom';
 import { getAllDrills } from '../../moduels/DrillManager';
 import { deleteDrill } from '../../moduels/DrillManager';
 import { DrillCard } from './DrillCard';
@@ -33,15 +32,11 @@ export const DrillList = () => {
         <>
             <div>
 
-                {/* <Link to="/create">create drill</Link> */}
-
-                    {drills.map(drill =>
-                        <DrillCard
-                            key={drill.id}
-                            drill={drill}
-                            handleDeleteDrill={handleDeleteDrill} />)}
-
-
+                {drills.map(drill =>
+                    <DrillCard
+                        key={drill.id}
+                        drill={drill}
+                        handleDeleteDrill={handleDeleteDrill} />)}
             </div>
 
 

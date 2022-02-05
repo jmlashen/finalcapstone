@@ -1,67 +1,86 @@
-// import React, { useState, useEffect } from "react"
-// import { getRoundById, updateRound } from "../modules/RoundDataManager"
-// import "./Round.css"
-// import { GetAllCourses } from "../modules/CoursesDataManager"
+import React, { useState, useEffect } from "react"
+import { useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { getDrillById, updateDrill } from '../../moduels/DrillManager';
 
 
 
-// export const DrillEditForm = ({reloadForm, toggleEdit, drill}) => {
+
+export const DrillEditForm = () => {
+
+
+    const [drill, setDrill] = useState({
+
+        drill_typeId: 0,
+        adminId: "",
+        start_time: "",
+        end_time: "",
+        light_check_status: "",
+        notes: "",
+
+
+
+    })
+
+    // const [isLoading, setIsLoading] = useState(false)
+    const history = useHistory()
+    const {drillId} = useParams()
+    console.log(drillId)
+
    
 
-//     const [drills, setDrills] = useState({ 
-
-//         notes: "",
-      
-
-//     })
-
-//     const [isLoading, setIsLoading] = useState(false)
-
-//     const drillId = drill.id
-//     const [courses, setCourses] = useState([])
-//     // USESTATE: useState is a Hook that allows you to have state variables in 
-//     // functional components. You pass the initial state to the
-//     // function and it returns a variable with the current state value 
-//     // (not necessarily the initial state) and another function 
-//     // to update this value.
-
-//     const handleFieldChange = event => {
-//         const stateToChange = { ...rounds }
-//         stateToChange[event.target.id] = event.target.value;
-//         setRounds(stateToChange)
-//     }
+    const handleFieldChange = event => {
+        const stateToChange = { ...drill }
+        stateToChange[event.target.id] = event.target.value;
+        setDrill(stateToChange)
+    }
 
 
-//     const updateExistingRound = event => {
-//         event.preventDefault()
-//         setIsLoading(true)
+    const updateExistingDrill = event => {
+        event.preventDefault()
+        // setIsLoading(true)
 
-//         const editedRound = {
-//             id: roundId,
-//             courseId: rounds.courseId,
-//             roundDate: rounds.roundDate,
-//             score: rounds.score,
-//             reflection: rounds.reflection,
-//             userId: rounds.userId
-//             // image: image ? image : courses.image
-//         }
+        const editedDrill = {
+            
+            id: drillId,
+            drill_typeId: drill.drill_typeId,
+            adminId: drill.adminId,
+            start_time: drill.start_time,
+            end_time: drill.end_time,
+            light_check_status: drill.light_check_status,
+            notes: drill.notes
 
-//         updateRound(editedRound)
-//             .then(toggleEdit)
-//             .then(reloadForm)
-//     }
+        }
 
-//     useEffect(() => {
-//         getRoundById(roundId)
-//             .then(round => {
-//                 setRounds(round)
-//                 setIsLoading(false)
-//             })
-//     }, [])
+        updateDrill(editedDrill)
+        .then(() => history.push("/drills"))
+         
+    }
 
-//     useEffect(() => {
-//         GetAllCourses()
-//             .then(courses => {
-//                 setCourses(courses)
-//             })
-//     }, [])
+    useEffect(() => {
+        getDrillById(drillId)
+            .then(drill => {
+                setDrill(drill)
+                // setIsLoading(false)
+            })
+    }, [])
+
+    return (
+
+        <>
+
+            <div>
+                <label htmlFor="notes"></label>
+                <textarea className="form-notes" type="text" id="notes" onChange={handleFieldChange} placeholder="notes" value={drill.notes} />
+            </div>
+
+           <h1>HI!</h1>
+
+            <button className="btn btn-primary"
+                onClick={updateExistingDrill}>
+                Save Drill
+            </button>
+
+        </>
+    )
+};
