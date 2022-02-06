@@ -6,7 +6,7 @@ export const ContactCard = ({ contact }) => {
     return (
         <>
             <div>
-                <h1>{contact.title}</h1>
+                <p>{contact.title}</p>
 
                 <a href={`tel:${contact.phone}`}><button>call</button></a>
 

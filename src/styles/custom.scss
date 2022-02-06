@@ -1,0 +1,144 @@
+//IMPORTS *************************
+
+@import "bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Josefin+Sans:wght@600&display=swap');
+@import "./colors.scss";
+
+//MAIN STYLING =========================
+// body {
+//     margin-top: 300px;
+  
+//   }
+
+  // TEXT =========================
+
+// h1 {
+//     font-family: 'Inter', sans-serif;
+//     color: white;
+// }
+
+// p {
+//     font-family: 'Inter', sans-serif;
+//     color: black;
+// }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+div.weather-card {
+    color: $maingold;
+    font-size: xx-small;
+
+}
+
+.get_user {
+    color: $maingold;
+    font-size: xx-small;
+}
+
+.get_user_home {
+    color: $darkblue;
+    font-family: 'Inter', sans-serif; 
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.home-greeting {
+    color: $darkblue;
+    font-size: small;
+    font-family: 'Inter', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.span {
+    font-family: 'Inter', sans-serif; 
+}
+
+.zkhool-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 95px;
+}
+
+.zkhool-logo {
+    width: 90px;
+
+}
+button.drill-type-buttons.btn.btn-primary {
+
+    background-color: $darkblue;
+}
+.button.drill-type-buttons.btn.btn-primary:hover{
+    transition: 2s;
+    background-color: $mainblue;
+}
+
+.drill-type-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 60px;
+    font-size: large;
+    font-family: 'Inter', sans-serif; 
+    
+}
+
+.drill-type-buttons-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    color: $darkblue;
+}
+
+// NAVBAR
+@media only screen and (max-width: 768px ) { 
+
+.nav {
+     background-color: $mainblue;
+}
+
+.nav-header {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+
+}
+
+.navbar-toggler {
+    border: none !important;
+    
+}
+
+// .navbar-toggler-icon {
+//     border: none !important;
+    
+// }
+
+// .navbar-collapse {
+   
+//     border: none !important;
+// }
+
+
+.nav-link {
+    display: flex;
+    justify-content:center;
+}
+
+.navcontain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}}

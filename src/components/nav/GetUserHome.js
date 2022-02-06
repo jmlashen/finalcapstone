@@ -5,8 +5,8 @@ export const GetUserHome = () => {
     console.log(user)
     if (user) {
         return (
-            <div className="get_user">
-                <h1>Hello, {user}!</h1>
+            <div className="get_user_home">
+                <h1>Hi, {user}!</h1>
             </div>
         )
     } else {

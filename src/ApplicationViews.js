@@ -14,6 +14,7 @@ import { DrillEditForm } from "./components/drills/DrillEditForm";
 
 
 
+
 export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) => {
     const [show, setShow] = useState(false)
     return (
