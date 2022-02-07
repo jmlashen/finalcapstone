@@ -2,26 +2,42 @@ import React, { useState, useEffect } from "react";
 import { DrillButton } from "./components/DrillButton";
 import { GetUserHome } from "./components/nav/GetUserHome";
 import { getDrillTypes } from "./moduels/DrillManager";
+import home from "./images/home.svg"
 
 export const Home = () => {
 
-    const [drillTypes, setDrillTypes] = useState ([]);
+    const [drillTypes, setDrillTypes] = useState([]);
 
-    
+
 
     useEffect(() => {
-	
+
         getDrillTypes().then(drill_types => {
             setDrillTypes(drill_types)
             console.log(drillTypes)
-        }) 
-	}, []);
+        })
+    }, []);
     return (
         <>
-            <h1><GetUserHome/></h1>
-            <h2>What type of drill are you conducting today?</h2>
+        
+            {/* <div className="zkhool-header">
+                <img className="zkhool-logo" src={home} alt="logo" />
+            </div> */}
+            <div className="greeting">
+            <div className="greeting-home-contain"> 
+            <div className="get_user_home">
+                <GetUserHome />
+            </div>
 
-            {drillTypes.map(drillType => 
+            <div className="home-greeting">
+                <p>What type of drill are you conducting today?</p>
+            </div>
+            </div>
+            </div>
+            
+      
+
+            {drillTypes.map(drillType =>
                 <DrillButton
                     key={drillType.id}
                     drillType={drillType} />)}

@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useStopwatch } from 'react-timer-hook';
 import "./styles/timer.css"
+import "./styles/custom.scss"
+import { Button } from 'react-bootstrap';
 
 
 
-export const Stopwatch = ({setStartTime, setEndTime}) => {
-   
-   
-    
+export const Stopwatch = ({ setStartTime, setEndTime }) => {
+
+
+
     const {
         seconds,
         minutes,
@@ -29,33 +31,58 @@ export const Stopwatch = ({setStartTime, setEndTime}) => {
     const handleStop = () => {
         pause()
         setEndTime(Date.now())
-    } 
+    }
 
-   
+
     const handleReset = () => {
         reset()
         handleStop()
-      
+
     }
 
     return (
 
         <>
-        
-        <div className='stopwatch-container'>
-        <h2></h2>
-        <div className='stopwatch'>
-            <div className='stopwatch-time'>
-                <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
+
+            <div className='stopwatch-container'>
+                {/* <div className="start_drill">
+            <h1>Start Drill</h1>
+            
+            </div> */}
+                <div className='stopwatch'>
+                    <div className='stopwatch-time'>
+                        <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
+                    </div>
+
+                </div>
+                <div className="timer_note">
+                {/* <p>(to time drill press START - to stop and log drill press STOP)</p> */}
+                </div>
+   
+                <div className="drill_progress_contain">
+                    <div className="drill_progress">
+                        <p>{isRunning ? 'Drill in progress..' : 'Drill stopped'}</p>
+                    </div>
+                </div>
+
+                <div className="timer-buttons-container">
+                    
+                    <div className="start">
+                        
+                        <Button variant="success" onClick={handleStart}>Start</Button>
+                    </div>
+                    <div className="reset">
+                        <Button variant="secondary" onClick={handleReset}>Reset</Button>
+                    </div>
+                    <div className="stop">
+                        <Button variant="danger" onClick={handleStop}>Stop</Button>
+                    </div>
+                </div>
+
+                
             </div>
-        </div>
-        <p>{isRunning ? 'Drill in progress' : 'Drill stopped'}</p>
-        <button onClick={handleStart}>Start</button>
-        <button onClick={handleReset}>Reset</button>
-        <button onClick={handleStop}>Stop</button>
-        </div>
-        
-        
+
+
         </>
 
 

@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { getWeather } from "./moduels/EventManager";
 import { useHistory } from "react-router";
-
+import { GetUser } from "./components/nav/GetUser";
+import "./styles/custom.scss"
 
 
 export const WeatherCard = () => {
@@ -34,20 +35,30 @@ export const WeatherCard = () => {
                 onClick={handleCancelButton}>
                 Go Back
             </button> */}
-            <section className="weather">
-                <h3>Weather</h3>
-                {weather.main &&
-                    <>
-                        <span>Temp: {Math.round(weather.main.temp)}</span>
-                        <p>{weather.weather[0].description}</p>
-                        <div className="icon">
-                            <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} />
+
+
+            {weather.main &&
+                <>
+                    <div className="weather-card">
+                    
+                                {/* <GetUser /> */}
+                            
+                        <p>{weather.weather[0].description}{Math.round(weather.main.temp)}°</p>
+                       
+                        
                         </div>
+                       
+                        {/* <div className="icon">
+                            <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} />
+                           
+                        </div> */}
+                    
 
-                    </>
-                }
+                </>
+            }
 
-            </section>
+
+
         </>
     )
 }

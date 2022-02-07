@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    box-shadow: 1px 5px 50px -10px #727272;
+    box-shadow: 1px 5px 50px -20px #727272;
     background-image:radial-gradient(rgb(0, 0, 0) 20%, rgb(28, 58, 136));
    
 

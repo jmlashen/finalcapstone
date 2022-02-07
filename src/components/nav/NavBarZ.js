@@ -2,8 +2,10 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
+import "../../styles/custom.scss"
 import { WeatherCard } from "../../WeatherCard";
 import { GetUser } from "./GetUser";
+
 
 export const NavBarZ = ({ clearUser, isAuthenticated }) => {
 
@@ -23,32 +25,33 @@ export const NavBarZ = ({ clearUser, isAuthenticated }) => {
 
     return (
         <>
-            <Navbar>
-                <Nav>
-                    {isAuthenticated ?
-                        <Link to="/home"><h1>home</h1></Link>
-                        : null}
+            <Navbar collapseOnSelect fixed="top" expand="lg" variant="dark" className="nav d-flex justify-content"><div className="nav-header"><h1>ZKHOOL</h1><GetUser/></div>
+                
+                <Navbar.Toggle/>
+                
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav>
+                        <div className="navcontain">
+                            {isAuthenticated ?
+                                <Link to="/home">Home</Link>
+                                : null}
 
-                    {isAuthenticated ?
-                        <Link to="/drills"><h1>drills</h1></Link>
-                        : null}
-                    {isAuthenticated ?
-                        <Link to="/contacts"><h1>contacts</h1></Link>
-                        : null}
-                    {isAuthenticated ?
-                        <button onClick={handleLogout}>Logout</button>
-                        : null}
+                            {isAuthenticated ?
+                                <Link to="/drills">Drills</Link>
+                                : null}
+                            {isAuthenticated ?
+                                <Link to="/contacts">Contacts</Link>
+                                : null}
+                            {isAuthenticated ?
+                                <Link to="/login" onClick={handleLogout}>Logout</Link>
+                                : null}
 
-                    <div>
-                        <WeatherCard />
-                    </div>
-
-                    <div className="get">
-                        <GetUser />
-                    </div>
-
-                </Nav>
+                         
+                        </div>
+                    </Nav>
+                    </Navbar.Collapse>
             </Navbar>
+            
         </>
     )
 }

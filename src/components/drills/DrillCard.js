@@ -15,11 +15,11 @@ export const DrillCard = ({ drill, handleDeleteDrill }) => {
     return (
         <>
             <div>
-                <h1>{(drill.drill_type.title)} Drill</h1>
-                <h3>Drill stared:</h3><p>{drill.start_time}</p>
-                <h3>Drill ended:</h3><p>{drill.end_time}</p>
+                <p>{(drill.drill_type.title)} Drill</p>
+                <p>Drill stared:</p><p>{drill.start_time}</p>
+                <p>Drill ended:</p><p>{drill.end_time}</p>
                 {drill.light_check_status == true ? <p>Light checked</p> : null}
-                <h3>Conducted by:</h3><p>{drill.admin.name}</p>
+                <p>Conducted by:</p><p>{drill.admin.name}</p>
                 <p>{drill.notes}</p>
 
                 <button type="button"
