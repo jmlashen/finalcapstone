@@ -4,8 +4,7 @@ import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
 import "../../styles/custom.scss"
-import { WeatherCard } from "../../WeatherCard";
-import { GetUser } from "./GetUser";
+
 
 
 export const NavBarZ = ({ clearUser, isAuthenticated }) => {
@@ -53,7 +52,7 @@ export const NavBarZ = ({ clearUser, isAuthenticated }) => {
                     </Navbar.Collapse>
                     
             </Navbar>
-            <GetUser/>
+            
         </>
     )
 }
