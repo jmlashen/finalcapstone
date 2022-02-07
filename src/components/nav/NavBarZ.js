@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
 import "../../styles/custom.scss"
@@ -25,33 +26,34 @@ export const NavBarZ = ({ clearUser, isAuthenticated }) => {
 
     return (
         <>
-            <Navbar collapseOnSelect fixed="top" expand="lg" variant="dark" className="nav d-flex justify-content"><div className="nav-header"><h1>ZKHOOL</h1><GetUser/></div>
+            <Navbar expand="lg" fixed="top"  variant="dark" className="nav d-flex justify-content"><div className="nav-header"><h1>ZKHOOL</h1></div>
                 
                 <Navbar.Toggle/>
                 
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav>
+                    <Nav expand="false">
                         <div className="navcontain">
                             {isAuthenticated ?
-                                <Link to="/home">Home</Link>
+                                <Link to="/home">HOME</Link>
                                 : null}
 
                             {isAuthenticated ?
-                                <Link to="/drills">Drills</Link>
+                                <Link to="/drills">DRILLS</Link>
                                 : null}
                             {isAuthenticated ?
-                                <Link to="/contacts">Contacts</Link>
+                                <Link to="/contacts">CONTACTS</Link>
                                 : null}
                             {isAuthenticated ?
-                                <Link to="/login" onClick={handleLogout}>Logout</Link>
+                                <Link to="/login" onClick={handleLogout}>LOGOUT</Link>
                                 : null}
 
                          
                         </div>
                     </Nav>
                     </Navbar.Collapse>
+                    
             </Navbar>
-            
+            <GetUser/>
         </>
     )
 }

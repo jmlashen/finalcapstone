@@ -19,30 +19,34 @@ export const Home = () => {
     }, []);
     return (
         <>
-        
+
             {/* <div className="zkhool-header">
                 <img className="zkhool-logo" src={home} alt="logo" />
             </div> */}
             <div className="greeting">
-            <div className="greeting-home-contain"> 
-            <div className="get_user_home">
-                <GetUserHome />
+                <div className="greeting-home-contain">
+                    <div className="get_user_home">
+                        <GetUserHome />
+                    </div>
+
+                    <div className="home-greeting">
+                        <p>What type of drill are you conducting today?</p>
+                    </div>
+                </div>
             </div>
 
-            <div className="home-greeting">
-                <p>What type of drill are you conducting today?</p>
-            </div>
-            </div>
-            </div>
-            
-      
 
-            {drillTypes.map(drillType =>
-                <DrillButton
-                    key={drillType.id}
-                    drillType={drillType} />)}
+           
+                <div>
+                    {drillTypes.map(drillType =>
+                        <DrillButton
+                            key={drillType.id}
+                            drillType={drillType} />)}
+                </div>
 
-
+                <div className="home-to-footer">
+                    <h1></h1>
+        </div>
         </>
     )
 }

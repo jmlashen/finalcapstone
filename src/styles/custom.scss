@@ -28,6 +28,136 @@ a {
     color: white;
 }
 
+a:visited {
+    color: $maingold;
+    background-color: transparent;
+   
+  }
+  
+  a:hover {
+    color: white;
+    background-color: transparent;
+    
+  }
+  
+  a:active {
+    color: $darkblue;
+    background-color: transparent;
+    
+  }
+// CONTACTS 
+
+
+.contacts-background {
+    background-image: radial-gradient(#2864FF,#132659,#2864FF 800px 20px);
+    padding-bottom: 100px;
+    padding-top: 150px;
+
+}
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin: 20px;
+    font-family: 'Inter', sans-serif;
+    border: 1px;
+    border-style: solid ;
+    border-radius: 10px;
+    background-color: white;
+    color: $darkblue;
+    .btn-success {
+        width: 75px;
+        height: 40px;
+    }
+}
+// ==================
+// FOOTER 
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: xx-small;
+    // margin-top: 20px;
+    padding-top: 10px;
+    margin-bottom: none;
+    background-color: $darkblue;
+    color: white;
+
+}
+// =================
+// DRILLS
+
+.drill_buttons {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  padding-top: 10px;
+
+  .btn-primary{
+      width: 140px;
+    //   padding-right: 40px;
+    //   padding-left: 40px;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+}
+
+.drills_top_container {
+  margin-top: 140px;
+}
+
+.drills_main_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.drills_title_container {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    // align-items: center;
+    color: white;
+    border: transparent;
+    border-style: solid;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 20px;
+    background-image: radial-gradient(#132659,#2864FF 200%);
+    font-size: small;
+    // text-align: left;
+    width: 300px;
+    line-height: 1px;
+}
+.drills_container {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    // align-items: center;
+    color: $darkblue;
+    border: black 1px;
+    border-style: solid;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+    // background-color:#FFCF57;
+    font-size: small;
+    text-align: left;
+    min-width: 300px;
+    line-height: 5px;
+}
+// =======================
+
 // LOGIN 
 
 
@@ -123,6 +253,11 @@ a {
     display: flex;
     justify-content: center;
     padding-top: 10px;
+    padding-bottom: 60px;
+
+    a{
+        color: white;
+    }
         .btn-primary {
             width: 280px;
             height: 50px;
@@ -187,7 +322,7 @@ a {
     
 }
 .stopwatch-container {
-    padding-top: 120px;
+    padding-top: 75px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -204,7 +339,7 @@ input {
 
 // HOME 
 .greeting {
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -217,7 +352,7 @@ input {
     border-style: solid;
     border-radius: 10px;
     padding-top: 10px;
-    background-color: $maingold;
+    background-color: white;
     box-shadow: black 0px 2px 5px 0px;
     width: 280px;
     
@@ -268,14 +403,6 @@ div.weather-card {
     width: 90px;
 
 }
-// button.drill-type-buttons.btn.btn-primary {
-
-//     background-color: $darkblue;
-// }
-// .button.drill-type-buttons.btn.btn-primary:hover{
-//     transition: 2s;
-//     background-color: $mainblue;
-// }
 
 .btn-primary {
     background-color: $darkblue;
@@ -294,7 +421,7 @@ div.weather-card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
+    width: 280px;
     height: 60px;
     font-size: large;
     font-family: 'Inter', sans-serif; 
@@ -307,6 +434,9 @@ div.weather-card {
     margin: 20px;
     color: $darkblue;
 }
+.home-to-footer {
+    padding-bottom: 110px;
+} 
 
 // ===================
 

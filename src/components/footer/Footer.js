@@ -5,7 +5,11 @@ export const Footer = () => {
 
     return (
         <>
-            <h6>FOOTER</h6>
+             <div className="footer-content">
+                    <p>
+                       &copy; ZKHOOL by Jake Lashenik 2022
+                    </p>
+                </div>
 
             {/* <div>
                 <WeatherCard />

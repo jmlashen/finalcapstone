@@ -15,6 +15,7 @@ import { DrillEditForm } from "./components/drills/DrillEditForm";
 
 
 
+
 export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) => {
     const [show, setShow] = useState(false)
     return (
@@ -25,12 +26,15 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
             </Route>
 
             <Route exact path="/drills">
+            <div className="drills_top_container"></div>
                 <DrillList />
 
             </Route>
 
             <Route exact path="/contacts">
+                <div  className="contacts-background">
                 <Contacts />
+                </div>
 
             </Route>
 
@@ -43,7 +47,9 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
             </Route>
 
             <Route exact path="/home">
+            <div  className="contacts-background">
                 {isAuthenticated ? <Home /> : <Redirect to="/login" />}
+            </div>
             </Route>
 
 
