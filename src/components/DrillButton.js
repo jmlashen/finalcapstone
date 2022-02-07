@@ -7,11 +7,13 @@ export const DrillButton = ({drillType}) => {
     return (
         <>
         <Link to={`drills/create/${drillType.id}`}>
+        
         <div className="drill-type-buttons-container">
         <Button className="drill-type-buttons">{drillType.title}</Button>
         </div>
+        
         </Link>
-
+        
         
         </>
     )

@@ -20,69 +20,37 @@
     }
   ],
   "drill_logs": [
+
     {
-      "id": 1,
+      "id": 3,
       "drill_typeId": 1,
-      "adminId": 2,
-      "start_time": "Fri Feb 04 2022 6:02 pm",
-      "end_time": "Fri Feb 04 2022 6:02 pm",
+      "adminId": 1,
+      "start_time": "Tues Jan 18 2022 2:34 pm",
+      "end_time": "Tues Jan 18 2022 2:36 pm",
       "light_check_status": true,
-      "notes": "asd"
+      "notes": ""
     },
+
     {
       "id": 2,
       "drill_typeId": 1,
       "adminId": 2,
-      "start_time": "Fri Feb 04 2022 6:15 pm",
-      "end_time": "Fri Feb 04 2022 6:15 pm",
+      "start_time": "Tues Dec 14 2021 10:00 pm",
+      "end_time": "Tues Dec 14 2021 10:02 pm",
       "light_check_status": true,
-      "notes": "asddasdasassddasdasdasdas"
+      "notes": ""
     },
+
     {
-      "id": 3,
+      "id": 1,
       "drill_typeId": 1,
-      "adminId": 2,
-      "start_time": "Fri Feb 04 2022 6:18 pm",
-      "end_time": "Fri Feb 04 2022 6:19 pm",
+      "adminId": 1,
+      "start_time": "Wed Nov 17 2021 3:00 pm",
+      "end_time": "Wed Nov 17 2021 3:02 pm",
       "light_check_status": true,
-      "notes": "sdasddddddddd"
-    },
-    {
-      "id": 4,
-      "drill_typeId": 1,
-      "adminId": 2,
-      "start_time": "Fri Feb 04 2022 6:20 pm",
-      "end_time": "Fri Feb 04 2022 6:20 pm",
-      "light_check_status": true,
-      "notes": "gfgfgfgtttttt"
-    },
-    {
-      "id": 5,
-      "drill_typeId": 2,
-      "adminId": 2,
-      "start_time": "Fri Feb 04 2022 6:20 pm",
-      "end_time": "Fri Feb 04 2022 6:20 pm",
-      "light_check_status": true,
-      "notes": "dsdsd"
-    },
-    {
-      "id": 6,
-      "drill_typeId": 3,
-      "adminId": 2,
-      "start_time": "Fri Feb 04 2022 6:20 pm",
-      "end_time": "Fri Feb 04 2022 6:21 pm",
-      "light_check_status": true,
-      "notes": "sds"
-    },
-    {
-      "drill_typeId": 1,
-      "adminId": 2,
-      "start_time": "Sun Feb 06 2022 12:46 pm",
-      "end_time": "Sun Feb 06 2022 12:46 pm",
-      "light_check_status": true,
-      "notes": "",
-      "id": 7
+      "notes": ""
     }
+
   ],
   "drill_types": [
     {
@@ -151,7 +119,7 @@
     },
     {
       "id": 11,
-      "title": "TN Emergency Management",
+      "title": "TN Emergency Mgmt.",
       "phone": "+1.615.253.1336"
     },
     {
