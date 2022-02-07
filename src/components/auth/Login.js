@@ -1,5 +1,9 @@
 import React, { useState } from "react"
+import { Button, Form } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
+import { Input, Label } from "reactstrap";
+import logo from "../../images/logo.svg"
+import "../../styles/custom.scss";
 
 
 
@@ -39,8 +43,15 @@ export const Login = ({ setAuthUser }) => {
 
     return (
 
-        <main>
-          
+        <main className="login-main">
+
+            <div className="login-logo-contain">
+                <img className="login-logo" src={logo} alt="logo" />
+                <h1>ZKHOOL</h1>
+            </div>
+
+
+
             <dialog open={existDialog}>
                 <div>
                     User does not exist
@@ -50,54 +61,56 @@ export const Login = ({ setAuthUser }) => {
                 </button>
             </dialog>
 
-        <div >
-            <section>
-                <form onSubmit={handleLogin}>
-                    <div>
-                    
-                    </div>
-
-                    <fieldset>
-                        <label htmlFor="inputEmail"></label>
-                        <input type="email"
-                            id="email"
-                            className="form-control-login"
-                            placeholder="Email address"
-                            required autoFocus
-                            value={loginUser.email}
-                            onChange={handleInputChange} />
-
-                    </fieldset>
-
-                    <fieldset>
-                        <label htmlFor="inputEmail"></label>
-                        <input type="password"
-                            id="password"
-                            className="form-control-login"
-                            placeholder="password"
-                            required autoFocus
-                            value={loginUser.password}
-                            onChange={handleInputChange} />
-
-                    </fieldset>
-                    <div>
-                        <button type="submit">
-                            Sign in
-                        </button>
-                    </div>
-
-                    <section>
-
+            <div >
+                <section>
+                    <Form onSubmit={handleLogin}>
                         <div>
-                            {/* <div><h6>not signed up?</h6></div>
+
+                        </div>
+
+                        <div className="login-form">
+                            <Label htmlFor="inputEmail"></Label>
+                            <Input type="email"
+                                id="email"
+                                className="form-control-login"
+                                placeholder="Email address"
+                                required autoFocus
+                                value={loginUser.email}
+                                onChange={handleInputChange} />
+
+
+
+
+                            <Label htmlFor="inputEmail"></Label>
+                            <Input type="password"
+                                id="password"
+                                className="form-control-login"
+                                placeholder="Password"
+                                required autoFocus
+                                value={loginUser.password}
+                                onChange={handleInputChange} />
+
+                        </div>
+
+
+                        <div className="login-button-contain">
+                            <Button type="submit">
+                                Login
+                            </Button>
+                        </div>
+
+                        <section>
+
+                            <div>
+                                {/* <div><h6>not signed up?</h6></div>
                             <div>
                                 <Link to="/register"><h6>Register for an account</h6></Link>
                             </div> */}
-                        </div>
-                    </section>
-                </form>
-            </section>
-        </div>
+                            </div>
+                        </section>
+                    </Form>
+                </section>
+            </div>
 
 
         </main>

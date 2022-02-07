@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router-dom';
+import { Input, Label } from 'reactstrap';
 import { addDrill, getAllAdmins, getDrillTypeById } from '../../moduels/DrillManager';
 import { Stopwatch } from '../../Stopwatch';
 import { formatAMPM } from '../../utils/Date'
+import "../../styles/custom.scss";
+import { Link } from 'react-router-dom'
 
 
 
@@ -84,22 +88,34 @@ export const DrillForm = () => {
     return (
 
         <>
+
             <Stopwatch setStartTime={setStartTime} setEndTime={setEndTime} />
 
-            <div>
-                <label htmlFor="notes"></label>
-                <textarea className="form-notes" type="text" id="notes" onChange={handleControlledInputChange} placeholder="notes" value={drill.notes} />
+            <div className="notes-contain">
+                <Label htmlFor="notes"></Label>
+                <Input className="form-notes" type="text" id="notes" onChange={handleControlledInputChange} placeholder="any notes?" value={drill.notes} />
             </div>
 
-            <div>
-                <input className="checkbox" onChange={handleCheckBoxClick} value={drill.light_check_status} type="checkbox" id="light_check_status"></input>
-                <label className="checkLabel" htmlFor="check">completed</label>
+            <div className="checkbox-contain">
+                <Input className="checkbox" onChange={handleCheckBoxClick} value={drill.light_check_status} type="checkbox" id="light_check_status"></Input>
+                <Label className="checkLabel" htmlFor="check"><div className="lights_checked"><p>lights checked?</p></div></Label>
             </div>
 
-            <button className="btn btn-primary"
-                onClick={handleClickSaveDrill}>
-                Save Drill
-            </button>
+            <div className="save-drill">
+
+                <Button
+                    onClick={handleClickSaveDrill}>
+                    Save Drill
+                </Button>
+            </div>
+
+            <div className="cancel-drill">
+                <Button>
+                    <Link to="/home">Cancel Drill</Link>
+                </Button>
+            </div>
+
+
 
         </>
     )

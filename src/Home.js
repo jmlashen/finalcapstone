@@ -20,16 +20,19 @@ export const Home = () => {
     return (
         <>
         
-            <div className="zkhool-header">
+            {/* <div className="zkhool-header">
                 <img className="zkhool-logo" src={home} alt="logo" />
-            </div>
-
+            </div> */}
+            <div className="greeting">
+            <div className="greeting-home-contain"> 
             <div className="get_user_home">
                 <GetUserHome />
             </div>
 
             <div className="home-greeting">
                 <p>What type of drill are you conducting today?</p>
+            </div>
+            </div>
             </div>
             
       

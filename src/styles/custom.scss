@@ -2,13 +2,14 @@
 
 @import "bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Josefin+Sans:wght@600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans:wght@600&display=swap');
 @import "./colors.scss";
 
-//MAIN STYLING =========================
-// body {
-//     margin-top: 300px;
+// MAIN STYLING =========================
+body {
+    margin:0;
   
-//   }
+  }
 
   // TEXT =========================
 
@@ -25,6 +26,201 @@
 a {
     text-decoration: none;
     color: white;
+}
+
+// LOGIN 
+
+
+.login-button-contain {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+
+    .btn-primary {
+        background-color: $maingold;
+        color: black;
+        width: 280px;
+    }
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .form-control:focus {
+        border-color: $maingold;
+    }
+}
+.login-main {
+    background-image: radial-gradient(#2864FF,#132659,#2864FF 800px 20px);
+    padding-bottom: 350px;
+    padding-top: 150px;
+
+}
+
+.login-logo-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    padding-bottom: 10px;
+    
+}
+
+.login-logo {
+    width: 200px;
+    
+}
+// =======================
+
+// DRILL FORM
+
+.timer_note {
+    display: flex;
+    justify-content: center;
+    font-size: x-small;
+    font-style: italic;
+    padding-top: 20px;
+}
+
+.drill_progress {
+    display: flex;
+    justify-content: center;
+    color: $darkblue;
+    border: transparent;
+    border-style: solid;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    background-color:#FFCF57;
+    font-size: small;
+    width: 280px;
+    
+
+    
+}
+
+.drill_progress_contain {
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.save-drill {
+    display: flex;
+    justify-content: center;
+        .btn-primary {
+            width: 280px;
+            height: 50px;
+        }
+}
+
+.cancel-drill {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+        .btn-primary {
+            width: 280px;
+            height: 50px;
+        }
+}
+
+
+.start_drill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    
+}
+
+.form-control {
+    width: 280px;
+}
+
+.lights_checked {
+    padding-left: 10px;
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 10px;
+    
+}
+.notes-contain {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.checkbox-contain {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.reset {
+    padding-left: 5px;
+    padding-right: 5px;
+
+    .btn-secondary {
+        height: 50px;
+        box-shadow: black 0px 2px 5px 0px;
+    }
+    
+}
+
+.btn-success {
+    box-shadow: black 0px 2px 5px 0px;
+    font-family: 'Inter', sans-serif;
+    width: 100px; 
+    height: 50px;
+      
+}
+
+.btn-danger {
+    box-shadow: black 0px 2px 5px 0px;
+    font-family: 'Inter', sans-serif;
+    width: 100px;
+    height: 50px;
+    
+}
+.stopwatch-container {
+    padding-top: 120px;
+    font-family: 'Inter', sans-serif;
+}
+
+input {
+    font-family: 'Inter', sans-serif;
+}
+
+.timer-buttons-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+// ====================
+
+// HOME 
+.greeting {
+    padding-top: 200px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.greeting-home-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: transparent;
+    border-style: solid;
+    border-radius: 10px;
+    padding-top: 10px;
+    background-color: $maingold;
+    box-shadow: black 0px 2px 5px 0px;
+    width: 280px;
+    
 }
 
 div.weather-card {
@@ -45,7 +241,7 @@ div.weather-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
+    
 }
 
 .home-greeting {
@@ -55,6 +251,7 @@ div.weather-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: x-small;
 }
 
 .span {
@@ -71,13 +268,26 @@ div.weather-card {
     width: 90px;
 
 }
-button.drill-type-buttons.btn.btn-primary {
+// button.drill-type-buttons.btn.btn-primary {
 
+//     background-color: $darkblue;
+// }
+// .button.drill-type-buttons.btn.btn-primary:hover{
+//     transition: 2s;
+//     background-color: $mainblue;
+// }
+
+.btn-primary {
     background-color: $darkblue;
+    border-color: transparent;
+    box-shadow: black 0px 2px 5px 0px;
+    font-family: 'Inter', sans-serif;
+    
 }
-.button.drill-type-buttons.btn.btn-primary:hover{
-    transition: 2s;
+
+.btn-primary:hover {
     background-color: $mainblue;
+    transition: 1s;
 }
 
 .drill-type-buttons {
@@ -97,6 +307,8 @@ button.drill-type-buttons.btn.btn-primary {
     margin: 20px;
     color: $darkblue;
 }
+
+// ===================
 
 // NAVBAR
 @media only screen and (max-width: 768px ) { 

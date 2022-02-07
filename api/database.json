@@ -73,6 +73,15 @@
       "end_time": "Fri Feb 04 2022 6:21 pm",
       "light_check_status": true,
       "notes": "sds"
+    },
+    {
+      "drill_typeId": 1,
+      "adminId": 2,
+      "start_time": "Sun Feb 06 2022 12:46 pm",
+      "end_time": "Sun Feb 06 2022 12:46 pm",
+      "light_check_status": true,
+      "notes": "",
+      "id": 7
     }
   ],
   "drill_types": [
