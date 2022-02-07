@@ -42,16 +42,20 @@ export const WeatherCard = () => {
                     <div className="weather-card">
                     
                                 {/* <GetUser /> */}
-                            
-                        <p>{weather.weather[0].description}{Math.round(weather.main.temp)}°</p>
-                       
+                        <div>   
+                        {/* <p>{weather.weather[0].description}</p> */}
+                        </div>
+                        <div className="temp">
+                        <p>{Math.round(weather.main.temp)}°</p>
+                        </div>
+                        <div className="icon">
+                            <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} />
+                           
+                        </div>
                         
                         </div>
                        
-                        {/* <div className="icon">
-                            <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} />
-                           
-                        </div> */}
+                        
                     
 
                 </>

@@ -2,7 +2,6 @@
 
 @import "bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Josefin+Sans:wght@600&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans:wght@600&display=swap');
 @import "./colors.scss";
 
 // MAIN STYLING =========================
@@ -338,8 +337,10 @@ input {
 // ====================
 
 // HOME 
+
+
 .greeting {
-    padding-top: 100px;
+    padding-top: 175px;
     padding-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -359,14 +360,27 @@ input {
 }
 
 div.weather-card {
-    color: $maingold;
-    font-size: xx-small;
+    color: $darkblue;
+    // font-size: xx-small;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    font-family: 'Inter', sans-serif;
+    
 
 }
 
+.temp{
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
 .get_user {
-    color: $maingold;
+    color:black;
     font-size: xx-small;
+    font-family: 'Inter', sans-serif;
+    margin-left: 25px;
+    margin-top: 5px;
 }
 
 .get_user_home {
@@ -435,7 +449,7 @@ div.weather-card {
     color: $darkblue;
 }
 .home-to-footer {
-    padding-bottom: 110px;
+    padding-bottom: 175px;
 } 
 
 // ===================
@@ -459,6 +473,12 @@ div.weather-card {
 .navbar-toggler {
     border: none !important;
     
+}
+
+.user_weather {
+    display: flex;
+    padding-top: 60px;
+    justify-content: space-between;
 }
 
 // .navbar-toggler-icon {

@@ -47,9 +47,9 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
             </Route>
 
             <Route exact path="/home">
-            <div  className="contacts-background">
+            {/* <div  className="contacts-background"> */}
                 {isAuthenticated ? <Home /> : <Redirect to="/login" />}
-            </div>
+            {/* </div> */}
             </Route>
 
 
