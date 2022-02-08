@@ -20,7 +20,6 @@
     }
   ],
   "drill_logs": [
-
     {
       "id": 3,
       "drill_typeId": 1,
@@ -30,7 +29,6 @@
       "light_check_status": true,
       "notes": ""
     },
-
     {
       "id": 2,
       "drill_typeId": 1,
@@ -40,7 +38,6 @@
       "light_check_status": true,
       "notes": ""
     },
-
     {
       "id": 1,
       "drill_typeId": 1,
@@ -49,8 +46,16 @@
       "end_time": "Wed Nov 17 2021 3:02 pm",
       "light_check_status": true,
       "notes": ""
+    },
+    {
+      "id": 4,
+      "drill_typeId": 1,
+      "adminId": 1,
+      "start_time": "Tue Feb 08 2022 9:49 am",
+      "end_time": "Tue Feb 08 2022 9:49 am",
+      "light_check_status": true,
+      "notes": " "
     }
-
   ],
   "drill_types": [
     {
