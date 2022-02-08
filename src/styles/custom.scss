@@ -44,6 +44,25 @@ a:visited {
     background-color: transparent;
     
   }
+
+// EDIT 
+.edit-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    font-family: 'Inter', sans-serif;
+
+    .btn-primary {
+        
+    }
+}
+
+.edit_button {
+    padding-top: 20px;
+    padding-bottom: 450px;
+}
+// ====================
 // CONTACTS 
 
 

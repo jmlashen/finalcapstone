@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
+import { Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { Input, Label } from "reactstrap";
 import { getDrillById, updateDrill } from '../../moduels/DrillManager';
 
 
@@ -24,10 +26,10 @@ export const DrillEditForm = () => {
 
     // const [isLoading, setIsLoading] = useState(false)
     const history = useHistory()
-    const {drillId} = useParams()
+    const { drillId } = useParams()
     console.log(drillId)
 
-   
+
 
     const handleFieldChange = event => {
         const stateToChange = { ...drill }
@@ -41,7 +43,7 @@ export const DrillEditForm = () => {
         // setIsLoading(true)
 
         const editedDrill = {
-            
+
             id: drillId,
             drill_typeId: drill.drill_typeId,
             adminId: drill.adminId,
@@ -53,8 +55,8 @@ export const DrillEditForm = () => {
         }
 
         updateDrill(editedDrill)
-        .then(() => history.push("/drills"))
-         
+            .then(() => history.push("/drills"))
+
     }
 
     useEffect(() => {
@@ -69,17 +71,19 @@ export const DrillEditForm = () => {
 
         <>
 
-            <div>
-                <label htmlFor="notes"></label>
-                <textarea className="form-notes" type="text" id="notes" onChange={handleFieldChange} placeholder="notes" value={drill.notes} />
+            <div className="edit-field">
+                <h1>Edit Notes</h1>
+                <Label htmlFor="notes"></Label>
+                <Input className="form-notes" type="text" id="notes" onChange={handleFieldChange} placeholder="notes" value={drill.notes} />
+                <div className="edit_button">
+                    <Button
+                        onClick={updateExistingDrill}>
+                        Save Note
+                    </Button>
+                </div>
             </div>
 
-           <h1>HI!</h1>
 
-            <button className="btn btn-primary"
-                onClick={updateExistingDrill}>
-                Save Drill
-            </button>
 
         </>
     )
