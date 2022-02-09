@@ -1,3 +1,22 @@
+# ZKHOOL: Final Capstone Project 
+
+## Try it out!
+* [Test the ZKHOOL app](https://nss-day-cohort-51.github.io/)
+
+## View my UX/UI Planning Process and Timeline in Figma
+* [Planning in Figma](https://www.figma.com/file/AsTeIingVjOPrXGbYBjmdJ/Cohort-Website-Design?node-id=0%3A1)
+
+## Prototypes in Figma
+
+* [View the Interactive Mobile Prototype in Figma](https://www.figma.com/proto/AsTeIingVjOPrXGbYBjmdJ/Cohort-Website-Design?node-id=445%3A1541&scaling=min-zoom&page-id=440%3A668&starting-point-node-id=445%3A1890) 
+
+* [View the Interactive Tablet Prototype in Figma](https://www.figma.com/proto/AsTeIingVjOPrXGbYBjmdJ/Cohort-Website-Design?node-id=445%3A2847&scaling=min-zoom&page-id=440%3A669&starting-point-node-id=445%3A2847)
+
+## Mock-Up
+
+![Cohort 51 Student Website High-Fidelity Mock-Up](src/images/c51-mock-up.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

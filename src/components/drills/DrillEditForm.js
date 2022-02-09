@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Button } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { Input, Label } from "reactstrap";
 import { getDrillById, updateDrill } from '../../moduels/DrillManager';
@@ -72,14 +72,19 @@ export const DrillEditForm = () => {
         <>
 
             <div className="edit-field">
-                <h1>Edit Notes</h1>
+                <h1>Edit Note</h1>
                 <Label htmlFor="notes"></Label>
-                <Input className="form-notes" type="text" id="notes" onChange={handleFieldChange} placeholder="notes" value={drill.notes} />
+                <textarea className="form-notes" type="text" id="notes" onChange={handleFieldChange} placeholder="notes" value={drill.notes} />
                 <div className="edit_button">
                     <Button
                         onClick={updateExistingDrill}>
                         Save Note
                     </Button>
+                    <div className="cancel_edit">
+                    <Button>
+                        <Link to="/drills">Cancel</Link>
+                    </Button>
+                    </div>
                 </div>
             </div>
 

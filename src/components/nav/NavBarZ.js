@@ -25,34 +25,43 @@ export const NavBarZ = ({ clearUser, isAuthenticated }) => {
 
     return (
         <>
-            <Navbar expand="lg" fixed="top"  variant="dark" className="nav d-flex justify-content"><div className="nav-header"><h1>ZKHOOL</h1></div>
-                
-                <Navbar.Toggle/>
-                
+            <Navbar collapseOnSelect expand="lg" fixed="top" variant="dark" className="nav d-flex justify-content">
+
+                <div className="nav-header">
+                    <a href="/home" rel="noreferrer">ZKHOOL</a>
+                </div>
+
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav expand="false">
                         <div className="navcontain">
                             {isAuthenticated ?
-                                <Link to="/home">HOME</Link>
+                                // <Link to="/home">HOME</Link>
+                                // : null}
+
+                                <Nav.Link href="/home">HOME</Nav.Link>
                                 : null}
 
                             {isAuthenticated ?
-                                <Link to="/drills">DRILLS</Link>
+                                // <Link to="/drills">DRILLS</Link>
+                                <Nav.Link href="/drills">DRILLS</Nav.Link>
                                 : null}
                             {isAuthenticated ?
-                                <Link to="/contacts">CONTACTS</Link>
+                                // <Link to="/contacts">CONTACTS</Link>
+                                <Nav.Link href="contacts">CONTACTS</Nav.Link>
                                 : null}
                             {isAuthenticated ?
-                                <Link to="/login" onClick={handleLogout}>LOGOUT</Link>
+                                <Nav.Link href="/login" onClick={handleLogout}>LOGOUT</Nav.Link>
                                 : null}
 
-                         
+
                         </div>
                     </Nav>
-                    </Navbar.Collapse>
-                    
+                </Navbar.Collapse>
+
             </Navbar>
-            
+
         </>
     )
 }

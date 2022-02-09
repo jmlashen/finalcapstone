@@ -21,40 +21,31 @@
   ],
   "drill_logs": [
     {
-      "id": 3,
-      "drill_typeId": 1,
+      "drill_typeId": 2,
       "adminId": 1,
-      "start_time": "Tues Jan 18 2022 2:34 pm",
-      "end_time": "Tues Jan 18 2022 2:36 pm",
+      "start_time": "Tue Feb 08 2022 8:39 pm",
+      "end_time": "Tue Feb 08 2022 8:39 pm",
       "light_check_status": true,
-      "notes": ""
+      "notes": "",
+      "id": 1
     },
     {
-      "id": 2,
-      "drill_typeId": 1,
-      "adminId": 2,
-      "start_time": "Tues Dec 14 2021 10:00 pm",
-      "end_time": "Tues Dec 14 2021 10:02 pm",
+      "drill_typeId": 2,
+      "adminId": 1,
+      "start_time": "Tue Feb 08 2022 9:17 pm",
+      "end_time": "Tue Feb 08 2022 9:17 pm",
       "light_check_status": true,
-      "notes": ""
+      "notes": "",
+      "id": 2
     },
     {
-      "id": 1,
       "drill_typeId": 1,
       "adminId": 1,
-      "start_time": "Wed Nov 17 2021 3:00 pm",
-      "end_time": "Wed Nov 17 2021 3:02 pm",
+      "start_time": "Wed Feb 09 2022 8:51 am",
+      "end_time": "Wed Feb 09 2022 8:51 am",
       "light_check_status": true,
-      "notes": ""
-    },
-    {
-      "id": 4,
-      "drill_typeId": 1,
-      "adminId": 1,
-      "start_time": "Tue Feb 08 2022 9:49 am",
-      "end_time": "Tue Feb 08 2022 9:49 am",
-      "light_check_status": true,
-      "notes": " "
+      "notes": "",
+      "id": 3
     }
   ],
   "drill_types": [

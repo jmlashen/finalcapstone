@@ -19,7 +19,7 @@ export const Stopwatch = ({ setStartTime, setEndTime }) => {
         start,
         pause,
         reset,
-    } = useStopwatch({ autoStart: false });
+    } = useStopwatch({ autoStart: false});
 
 
     const handleStart = () => {
@@ -28,15 +28,18 @@ export const Stopwatch = ({ setStartTime, setEndTime }) => {
 
     }
 
-    const handleStop = () => {
+    const handleStop = () => { 
         pause()
         setEndTime(Date.now())
     }
 
 
     const handleReset = () => {
-        reset()
         handleStop()
+        reset(Date.now(), false)
+        
+    
+        
 
     }
 
@@ -61,7 +64,7 @@ export const Stopwatch = ({ setStartTime, setEndTime }) => {
    
                 <div className="drill_progress_contain">
                     <div className="drill_progress">
-                        <p>{isRunning ? 'Drill in progress..' : 'Drill stopped'}</p>
+                        <p>{isRunning ? 'Drill in progress..' : 'Press Start to begin drill'}</p>
                     </div>
                 </div>
 
@@ -72,7 +75,7 @@ export const Stopwatch = ({ setStartTime, setEndTime }) => {
                         <Button variant="success" onClick={handleStart}>Start</Button>
                     </div>
                     <div className="reset">
-                        <Button variant="secondary" onClick={handleReset}>Reset</Button>
+                        <Button variant="secondary" onClick={handleReset} onClick={handleReset}>Reset</Button>
                     </div>
                     <div className="stop">
                         <Button variant="danger" onClick={handleStop}>Stop</Button>

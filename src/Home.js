@@ -34,15 +34,17 @@ export const Home = () => {
                     <div className="get_user_home">
                         <GetUserHome />
                     </div>
-                    <WeatherCard/>
-                    
-                    <div className="home-greeting">
-                        <p>What type of drill are you conducting today?</p>
+                    <div className="current_weather">
+                        <p>Current weather:</p>
+                        <WeatherCard />
                     </div>
                     
                 </div>
             </div>
 
+            <div className="home-greeting">
+                <p>What type of drill are you conducting today?</p>
+            </div>
 
 
             <div>
