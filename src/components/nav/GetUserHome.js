@@ -6,7 +6,7 @@ export const GetUserHome = () => {
     if (user) {
         return (
             <div className="get_user_home">
-                <h1>Hi, {user}!</h1>
+                <h1>Hello, {user}!</h1>
             </div>
         )
     } else {

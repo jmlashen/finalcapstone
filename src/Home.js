@@ -41,9 +41,10 @@ export const Home = () => {
                     
                 </div>
             </div>
-
+            <div className="home-greeting-contain">
             <div className="home-greeting">
-                <p>What type of drill are you conducting today?</p>
+                <p>What drill are we conducting today?</p>
+            </div>
             </div>
 
 

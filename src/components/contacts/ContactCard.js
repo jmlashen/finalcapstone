@@ -8,12 +8,15 @@ export const ContactCard = ({ contact }) => {
 
     return (
         <>
-        <div className="contacts-main"></div>
+
+            <div className="contacts-main"></div>
             <div className="contacts-container">
-                <h3>{contact.title}</h3>
+                <div className="contact-title">
+                    <h4>{contact.title}</h4>
+                </div>
                 <p>{contact.phone}</p>
 
-                <a href={`tel:${contact.phone}`}><Button variant="success"><span><BsFillTelephoneFill/> &nbsp; Call&nbsp;</span></Button></a>
+                <a href={`tel:${contact.phone}`}><Button variant="success"><span><BsFillTelephoneFill /> &nbsp; Call&nbsp;</span></Button></a>
 
 
             </div>

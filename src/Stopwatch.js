@@ -19,7 +19,7 @@ export const Stopwatch = ({ setStartTime, setEndTime }) => {
         start,
         pause,
         reset,
-    } = useStopwatch({ autoStart: false});
+    } = useStopwatch({ autoStart: false });
 
 
     const handleStart = () => {
@@ -28,7 +28,7 @@ export const Stopwatch = ({ setStartTime, setEndTime }) => {
 
     }
 
-    const handleStop = () => { 
+    const handleStop = () => {
         pause()
         setEndTime(Date.now())
     }
@@ -37,9 +37,9 @@ export const Stopwatch = ({ setStartTime, setEndTime }) => {
     const handleReset = () => {
         handleStop()
         reset(Date.now(), false)
-        
-    
-        
+
+
+
 
     }
 
@@ -59,19 +59,20 @@ export const Stopwatch = ({ setStartTime, setEndTime }) => {
 
                 </div>
                 <div className="timer_note">
-                {/* <p>(to time drill press START - to stop and log drill press STOP)</p> */}
+                    {/* <p>(to time drill press START - to stop and log drill press STOP)</p> */}
                 </div>
-   
+
                 <div className="drill_progress_contain">
                     <div className="drill_progress">
                         <p>{isRunning ? 'Drill in progress..' : 'Press Start to begin drill'}</p>
+
                     </div>
                 </div>
 
                 <div className="timer-buttons-container">
-                    
+
                     <div className="start">
-                        
+
                         <Button variant="success" onClick={handleStart}>Start</Button>
                     </div>
                     <div className="reset">
@@ -81,8 +82,13 @@ export const Stopwatch = ({ setStartTime, setEndTime }) => {
                         <Button variant="danger" onClick={handleStop}>Stop</Button>
                     </div>
                 </div>
+                <div className="drill_progress_contain_stop">
+                    <div className="drill_progress">
+                        <p>Press Stop when done</p>
+                    </div>
+                </div>
 
-                
+
             </div>
 
 

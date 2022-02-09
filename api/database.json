@@ -4,36 +4,36 @@
       "id": 1,
       "name": "Cynthia",
       "email": "cynthia@zkhool.me",
-      "password": "12345"
+      "password": "Cullabies713"
     },
     {
       "id": 2,
       "name": "Wendy",
       "email": "wendy@zkhool.me",
-      "password": "123456"
+      "password": "Cullabies713"
     },
     {
       "id": 3,
       "name": "User",
       "email": "user@zkhool.me",
-      "password": "1234567"
+      "password": "Cullabies713"
     }
   ],
   "drill_logs": [
     {
-      "drill_typeId": 2,
+      "drill_typeId": 1,
       "adminId": 1,
-      "start_time": "Tue Feb 08 2022 8:39 pm",
-      "end_time": "Tue Feb 08 2022 8:39 pm",
+      "start_time": "Tue Jan 18 2022 2:34 pm",
+      "end_time": "Tue Jan 18 2022 2:36 pm",
       "light_check_status": true,
       "notes": "",
-      "id": 1
+      "id": 3
     },
     {
-      "drill_typeId": 2,
+      "drill_typeId": 1,
       "adminId": 1,
-      "start_time": "Tue Feb 08 2022 9:17 pm",
-      "end_time": "Tue Feb 08 2022 9:17 pm",
+      "start_time": "Tue Dec 14 2021 10:00 am",
+      "end_time": "Tue Dec 14 2021 10:02 am",
       "light_check_status": true,
       "notes": "",
       "id": 2
@@ -41,11 +41,11 @@
     {
       "drill_typeId": 1,
       "adminId": 1,
-      "start_time": "Wed Feb 09 2022 8:51 am",
-      "end_time": "Wed Feb 09 2022 8:51 am",
+      "start_time": "Wed Nov 17 2021 3:00 pm",
+      "end_time": "Wed Nov 17 2021 3:02 pm",
       "light_check_status": true,
       "notes": "",
-      "id": 3
+      "id": 1
     }
   ],
   "drill_types": [

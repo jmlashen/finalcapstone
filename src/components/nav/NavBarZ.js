@@ -49,7 +49,7 @@ export const NavBarZ = ({ clearUser, isAuthenticated }) => {
                                 : null}
                             {isAuthenticated ?
                                 // <Link to="/contacts">CONTACTS</Link>
-                                <Nav.Link href="contacts">CONTACTS</Nav.Link>
+                                <Nav.Link href="/contacts">CONTACTS</Nav.Link>
                                 : null}
                             {isAuthenticated ?
                                 <Nav.Link href="/login" onClick={handleLogout}>LOGOUT</Nav.Link>
