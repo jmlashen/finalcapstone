@@ -62,7 +62,7 @@ export const DrillForm = () => {
         event.preventDefault() //Prevents the browser from submitting the form
 
         if (drill.drill_typeId === 0 || drill.start_time === 0 || drill.end_time === 0 || drill.light_check_status === false) {
-            window.alert("Please complete entire form")
+            window.alert("Did you check the lights?")
         } else {
 
             addDrill(drill)
@@ -92,8 +92,10 @@ export const DrillForm = () => {
             <Stopwatch setStartTime={setStartTime} setEndTime={setEndTime} />
 
             <div className="notes-contain">
+                <div className='label-indent'>
                 <Label htmlFor="notes"></Label>
-                <Input className="form-notes" type="text" id="notes" onChange={handleControlledInputChange} placeholder="any notes?" value={drill.notes} />
+                </div>
+                <textarea className="form-notes" type="text" id="notes" onChange={handleControlledInputChange} placeholder="Any notes?" value={drill.notes} />
             </div>
 
             <div className="checkbox-contain">
@@ -103,7 +105,7 @@ export const DrillForm = () => {
 
             <div className="save-drill">
 
-                <Button
+                <Button 
                     onClick={handleClickSaveDrill}>
                     Save Drill
                 </Button>

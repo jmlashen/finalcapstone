@@ -22,7 +22,7 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
 
         <>
             <Route path="/">
-                {isAuthenticated ? <NavBarZ clearUser={clearUser} isAuthenticated={isAuthenticated} /> : null}
+                {isAuthenticated ? <NavBarZ clearUser={clearUser} isAuthenticated={isAuthenticated} /> : <Redirect to="/login" />}
             </Route>
 
             <Route exact path="/drills">
@@ -47,11 +47,10 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
             </Route>
 
             <Route exact path="/home">
-            {/* <div  className="contacts-background"> */}
+            
                 {isAuthenticated ? <Home /> : <Redirect to="/login" />}
-            {/* </div> */}
+           
             </Route>
-
 
             <Route exact path="/login">
                 <Login setAuthUser={setAuthUser} />
@@ -62,8 +61,8 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
             </Route>
 
             <Route path="/">
-                {isAuthenticated ? <Footer clearUser={clearUser} isAuthenticated={isAuthenticated} /> : null}
-            </Route>
+                {isAuthenticated ? <Footer clearUser={clearUser} isAuthenticated={isAuthenticated} /> : <h2>footer</h2>}
+            </Route> 
 
         </>
 

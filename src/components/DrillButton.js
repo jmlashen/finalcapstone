@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button, OverlayTrigger } from "react-bootstrap";
 
 export const DrillButton = ({drillType}) => {
     console.log(drillType.title)
@@ -9,7 +9,9 @@ export const DrillButton = ({drillType}) => {
         <Link to={`drills/create/${drillType.id}`}>
         
         <div className="drill-type-buttons-container">
+           
         <Button className="drill-type-buttons">{drillType.title}</Button>
+       
         </div>
         
         </Link>

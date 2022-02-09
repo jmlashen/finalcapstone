@@ -44,8 +44,27 @@ a:visited {
     background-color: transparent;
     
   }
-
+.btn-btn-primary:hover {
+    background-color: $maingold;  
+}
 // EDIT 
+
+textarea {
+    width: 280px;
+    height: 100px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: rgb(236, 235, 235);
+    border-color: $darkblue;
+
+}
+
+:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+}
+
 .edit-field {
     display: flex;
     flex-direction: column;
@@ -53,23 +72,36 @@ a:visited {
     padding-top: 200px;
     font-family: 'Inter', sans-serif;
 
-    .btn-primary {
-        
-    }
+   
+
 }
 
 .edit_button {
     padding-top: 20px;
     padding-bottom: 450px;
+    display: flex;
+    
+    
+
+    .btn-primary {
+        a:visited {
+            color: white;
+        }
+    }
+}
+
+.cancel_edit {
+    margin-left: 20px;
 }
 // ====================
 // CONTACTS 
 
 
 .contacts-background {
-    background-image: radial-gradient(#2864FF,#132659,#2864FF 800px 20px);
+    // background-image: radial-gradient(#2864FF,#132659,#2864FF 800px 20px);
+    background-image: radial-gradient(#FFCF57,#ffdb80 500px 20px);
     padding-bottom: 100px;
-    padding-top: 150px;
+    padding-top: 60px;
 
 }
 
@@ -77,8 +109,7 @@ a:visited {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 10px;
+    padding: 20px;
     margin: 20px;
     font-family: 'Inter', sans-serif;
     border: 1px;
@@ -87,7 +118,7 @@ a:visited {
     background-color: white;
     color: $darkblue;
     .btn-success {
-        width: 75px;
+        width: 100px;
         height: 40px;
     }
 }
@@ -95,37 +126,65 @@ a:visited {
 // FOOTER 
 
 .footer-content {
-    display: flex;
-    justify-content: center;
-    font-family: 'Inter', sans-serif;
-    font-size: xx-small;
-    // margin-top: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     padding-top: 10px;
-    margin-bottom: none;
     background-color: $darkblue;
     color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: xx-small;
+    text-align: center;
+    p {
+        margin-bottom: 0;
+        padding-bottom: 10px;
+    }
 
 }
 // =================
+
 // DRILLS
+
+.drill_notes {
+    white-space: wrap;
+    padding-top: 10px;
+}
+
+textarea {
+    width: 280px;
+    height: 100px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: rgb(236, 235, 235);
+    border-color: $darkblue;
+
+  
+}
 
 .drill_buttons {
   display: flex;
   justify-content: center;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-bottom: 50px;
+
+  .btn-warning {
+      width: 120px;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-family: 'Inter', sans-serif;
+      opacity: .7;
+  }
 
   .btn-primary{
-      width: 140px;
-    //   padding-right: 40px;
-    //   padding-left: 40px;
+      width: 120px;
       margin-left: 10px;
       margin-right: 10px;
   }
 }
 
 .drills_top_container {
-  margin-top: 140px;
+  margin-top: 70px;
 }
 
 .drills_main_container {
@@ -147,12 +206,11 @@ a:visited {
     border-style: solid;
     border-radius: 10px;
     margin-top: 10px;
-    padding-top: 20px;
+    padding: 20px;
     background-image: radial-gradient(#132659,#2864FF 200%);
     font-size: small;
     // text-align: left;
     width: 300px;
-    line-height: 1px;
 }
 .drills_container {
     font-family: 'Inter', sans-serif;
@@ -160,19 +218,18 @@ a:visited {
     flex-direction: column;
     flex-wrap: wrap;
     // align-items: center;
-    color: $darkblue;
+    // color: $darkblue;
     border: black 1px;
     border-style: solid;
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 10px;
+    padding:20px;
     // background-color:#FFCF57;
     font-size: small;
     text-align: left;
-    min-width: 300px;
-    line-height: 5px;
+    width: 300px;
+  
 }
 // =======================
 
@@ -261,9 +318,14 @@ a:visited {
 .save-drill {
     display: flex;
     justify-content: center;
-        .btn-primary {
-            width: 280px;
-            height: 50px;
+   .btn-primary {
+    width: 280px;
+    height: 50px;
+   }
+    .btn-primary:hover {
+        background-color: #198754;
+        transition: .2s;
+       
         }
 }
 
@@ -301,10 +363,12 @@ a:visited {
     padding-bottom: 10px;
     
 }
+
 .notes-contain {
     display: flex;
     justify-content: center;
     padding-top: 40px;
+    
 }
 
 .checkbox-contain {
@@ -344,8 +408,10 @@ a:visited {
     font-family: 'Inter', sans-serif;
 }
 
-input {
+.form-notes {
     font-family: 'Inter', sans-serif;
+    padding: 0px 5px;
+    padding-top: 5px;
 }
 
 .timer-buttons-container {
@@ -360,7 +426,7 @@ input {
 
 .greeting {
     padding-top: 175px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
 }
@@ -378,20 +444,37 @@ input {
     
 }
 
+.current_weather {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Inter', sans-serif;
+  color: $darkblue;
+  opacity: 0.50;
+  p {
+      padding-top: 15px;
+  }
+}
+
 div.weather-card {
-    color: $darkblue;
+    
     // font-size: xx-small;
     display: flex;
     flex-direction: row;
-    margin: 20px;
+    // margin: 20px;
     font-family: 'Inter', sans-serif;
+    opacity: 0.85;
     
 
 }
+img {
+    width: 50px;
+    opacity: 0.85;
+}
 
 .temp{
-    padding-left: 20px;
-    padding-top: 40px;
+    padding-left: 10px;
+    opacity: 0.85;
+    
 }
 
 .get_user {
@@ -419,7 +502,8 @@ div.weather-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: x-small;
+    font-size: small;
+    
 }
 
 .span {
@@ -442,12 +526,12 @@ div.weather-card {
     border-color: transparent;
     box-shadow: black 0px 2px 5px 0px;
     font-family: 'Inter', sans-serif;
-    
 }
 
 .btn-primary:hover {
     background-color: $mainblue;
-    transition: 1s;
+    transition: .1s;
+
 }
 
 .drill-type-buttons {
@@ -467,17 +551,25 @@ div.weather-card {
     margin: 20px;
     color: $darkblue;
 }
-.home-to-footer {
-    padding-bottom: 175px;
-} 
+
 
 // ===================
 
 // NAVBAR
 @media only screen and (max-width: 768px ) { 
 
+    .navbar-dark
+    { 
+        .navbar-nav {
+
+        .nav-link {
+            color: $maingold;
+        }
+    }}
+
 .nav {
      background-color: $mainblue;
+     box-shadow: 0 20px 60px -40px rgb(44, 43, 43);
 }
 
 .nav-header {
@@ -486,6 +578,15 @@ div.weather-card {
     padding-left: 20px;
     font-family: 'Inter', sans-serif;
     color: white;
+
+    a {
+        color: white;
+        font-size: xx-large;
+        .nav-header:hover {
+            color: $maingold;
+            transition: 5ms;
+        }
+    }
 
 }
 
@@ -499,17 +600,6 @@ div.weather-card {
     padding-top: 60px;
     justify-content: space-between;
 }
-
-// .navbar-toggler-icon {
-//     border: none !important;
-    
-// }
-
-// .navbar-collapse {
-   
-//     border: none !important;
-// }
-
 
 .nav-link {
     display: flex;
