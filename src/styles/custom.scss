@@ -7,6 +7,7 @@
 // MAIN STYLING =========================
 body {
     margin:0;
+    
   
   }
 
@@ -105,6 +106,20 @@ textarea {
 
 }
 
+.contact-title {
+    font-family: 'Inter', sans-serif;
+    color: $darkblue;
+}
+
+.contacts-header {
+    font-family: 'Inter', sans-serif;
+    color: $darkblue;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
 .contacts-container {
     display: flex;
     flex-direction: column;
@@ -131,7 +146,7 @@ textarea {
     bottom: 0;
     width: 100%;
     padding-top: 10px;
-    background-color: $darkblue;
+    background-color: $mainblue;
     color: white;
     font-family: 'Inter', sans-serif;
     font-size: xx-small;
@@ -153,7 +168,7 @@ textarea {
 
 textarea {
     width: 280px;
-    height: 100px;
+    height: 70px;
     border-radius: 10px;
     border: transparent;
     background-color: rgb(236, 235, 235);
@@ -173,7 +188,7 @@ textarea {
       margin-left: 10px;
       margin-right: 10px;
       font-family: 'Inter', sans-serif;
-      opacity: .7;
+      opacity: .6;
   }
 
   .btn-primary{
@@ -231,6 +246,10 @@ textarea {
     width: 300px;
   
 }
+
+.drill-headers {
+    color: $darkblue;
+}
 // =======================
 
 // LOGIN 
@@ -260,8 +279,18 @@ textarea {
 .login-main {
     background-image: radial-gradient(#2864FF,#132659,#2864FF 800px 20px);
     padding-bottom: 350px;
-    padding-top: 150px;
+    padding-top: 180px;
 
+}
+
+// LOGIN TABLET
+@media only screen and (min-width: 425px ) { 
+    .login-main {
+        background-image: radial-gradient(#2864FF,#132659,#2864FF 1200px 20px);
+        padding-bottom: 350px;
+        padding-top: 200px;
+    
+    }
 }
 
 .login-logo-contain {
@@ -292,17 +321,21 @@ textarea {
 
 .drill_progress {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     color: $darkblue;
     border: transparent;
     border-style: solid;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding-top: 20px;
+    border-radius: 5px;
     background-color:#FFCF57;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    // padding-top: 20px;
     font-size: small;
     width: 280px;
+    p {
+        margin-bottom:0;
+    }
     
 
     
@@ -310,7 +343,17 @@ textarea {
 
 .drill_progress_contain {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.drill_progress_contain_stop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
     
     
 }
@@ -417,7 +460,7 @@ textarea {
 .timer-buttons-container {
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 // ====================
 
@@ -468,7 +511,7 @@ div.weather-card {
 }
 img {
     width: 50px;
-    opacity: 0.85;
+    // opacity: 0.9;
 }
 
 .temp{
@@ -494,15 +537,29 @@ img {
     align-items: center;
     
 }
+.home-greeting-contain {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
 
 .home-greeting {
     color: $darkblue;
-    font-size: small;
+    font-size: x-small;
     font-family: 'Inter', sans-serif; 
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: small;
+    border: transparent;
+    border-style: solid;
+    border-radius: 5px;
+    background-color:#FFCF57;
+    padding: 10px;
+    width: 280px;
+    p {
+        margin-bottom: 0;
+    }
     
 }
 

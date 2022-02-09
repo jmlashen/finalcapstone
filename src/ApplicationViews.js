@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Route } from "react-router-dom"
 import { DrillList } from "./components/drills/DrillList";
 import { Redirect } from "react-router";
-import { Stopwatch } from "./Stopwatch";
 import { Home } from "./Home";
 import { NavBarZ } from "./components/nav/NavBarZ";
 import { Login } from "./components/auth/Login";
@@ -11,9 +10,6 @@ import { DrillForm } from "./components/drills/DrillForm";
 import { Footer } from "./components/footer/Footer";
 import { Contacts } from "./components/contacts/Contacts";
 import { DrillEditForm } from "./components/drills/DrillEditForm";
-
-
-
 
 
 export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) => {
@@ -26,30 +22,29 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
             </Route>
 
             <Route exact path="/drills">
-            <div className="drills_top_container"></div>
-                <DrillList />
-
+                <div className="drills_top_container"></div>
+                {isAuthenticated ? <DrillList /> : <Redirect to="/login" />}
             </Route>
 
             <Route exact path="/contacts">
-                <div  className="contacts-background">
-                <Contacts />
+                <div className="contacts-background">
+                    <div className="contacts-header">
+                        <h1>Emergency Contacts</h1>
+                    </div>
+                    <Contacts />
                 </div>
-
             </Route>
 
             <Route exact path="/drills/create/:drillId(\d+)">
-                <DrillForm />
+                {isAuthenticated ? <DrillForm /> : <Redirect to="/login" />}
             </Route>
 
             <Route exact path="/drills/:drillId(\d+)/edit">
-                <DrillEditForm />
+                {isAuthenticated ? <DrillEditForm /> : <Redirect to="/login" />}
             </Route>
 
             <Route exact path="/home">
-            
                 {isAuthenticated ? <Home /> : <Redirect to="/login" />}
-           
             </Route>
 
             <Route exact path="/login">
@@ -61,8 +56,8 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser, clearUser }) =>
             </Route>
 
             <Route path="/">
-                {isAuthenticated ? <Footer clearUser={clearUser} isAuthenticated={isAuthenticated} /> : <h2>footer</h2>}
-            </Route> 
+                {isAuthenticated ? <Footer clearUser={clearUser} isAuthenticated={isAuthenticated} /> : null}
+            </Route>
 
         </>
 

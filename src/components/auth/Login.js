@@ -110,6 +110,15 @@ export const Login = ({ setAuthUser }) => {
                         </section>
                     </Form>
                 </section>
+                <div className="login-button-contain">
+                <Link to="/contacts">
+                            <Button>View Emergency Contacts
+                                
+                                
+                                
+                            </Button>
+                            </Link>
+                        </div>
             </div>
 
 

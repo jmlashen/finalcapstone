@@ -22,29 +22,33 @@ export const DrillCard = ({ drill, handleDeleteDrill }) => {
                     <h2>{(drill.drill_type.title)} Drill</h2>
                     <h6>{drill.start_time}</h6>
                 </div>
-           
+
                 <div className="drills_container">
 
-
-                    <h5>End Time:</h5>
+                    <div className="drill-headers">
+                        <h5>End Time:</h5>
+                    </div>
                     <p>{drill.end_time}</p>
                     {/* <h5>Lights checked:</h5> */}
-
-                    <h5>Conducted by:</h5>
+                    <div className="drill-headers">
+                        <h5>Conducted by:</h5>
+                    </div>
                     <p>{drill.admin.name}</p>
-                    <h5>Notes:</h5>
+                    <div className="drill-headers">
+                        <h5>Notes:</h5>
+                    </div>
                     <div>
-                       <div> 
-                           {drill.light_check_status == true ? <span>Lights Working ✓</span> : null}
-                       </div>
-                       <div className="drill_notes">
-                           {drill.notes}
+                        <div>
+                            {drill.light_check_status == true ? <span>Lights Working ✓</span> : null}
+                        </div>
+                        <div className="drill_notes">
+                            {drill.notes}
                         </div>
                     </div>
                 </div>
 
                 <div className="drill_buttons">
-                    <Button variant="warning" 
+                    <Button variant="warning"
                         onClick={() => handleDeleteDrill(drill.id)} >
                         Delete
                     </Button>
