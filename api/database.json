@@ -64,15 +64,6 @@
       "light_check_status": true,
       "notes": "Test Drill",
       "id": 5
-    },
-    {
-      "drill_typeId": 3,
-      "adminId": 3,
-      "start_time": "Thu Feb 10 2022 1:53 pm",
-      "end_time": "Thu Feb 10 2022 1:53 pm",
-      "light_check_status": true,
-      "notes": "Test Drill",
-      "id": 6
     }
   ],
   "drill_types": [
