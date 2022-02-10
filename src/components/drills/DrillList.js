@@ -18,7 +18,7 @@ export const DrillList = () => {
     };
 
     const handleDeleteDrill = id => {
-        window.alert("Are you sure you want to Delete this drill?")
+        window.confirm("Are you sure you want to Delete this drill?")
         deleteDrill(id)
             .then(() => getAllDrills().then(setDrills));
             

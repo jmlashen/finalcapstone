@@ -47,7 +47,9 @@ export const Login = ({ setAuthUser }) => {
 
             <div className="login-logo-contain">
                 <img className="login-logo" src={logo} alt="logo" />
-                <h1>ZKHOOL</h1>
+                <div className="login-title">
+                    <h1>ZKHOOL</h1>
+                </div>
             </div>
 
 
@@ -111,14 +113,14 @@ export const Login = ({ setAuthUser }) => {
                     </Form>
                 </section>
                 <div className="login-button-contain">
-                <Link to="/contacts">
-                            <Button>View Emergency Contacts
-                                
-                                
-                                
-                            </Button>
-                            </Link>
-                        </div>
+                    <Link to="/contacts">
+                        <Button>View Emergency Contacts
+
+
+
+                        </Button>
+                    </Link>
+                </div>
             </div>
 
 

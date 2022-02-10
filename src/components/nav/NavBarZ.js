@@ -13,10 +13,13 @@ export const NavBarZ = ({ clearUser, isAuthenticated }) => {
 
     const handleLogout = () => {
         const retVal = window.confirm("Are you sure you want to Logout?")
-
+        console.log(retVal)
         if (retVal == true) {
-            history.push('/login');
             clearUser();
+            history.push('/login');
+            
+            
+            
         } else {
             return false
         }
@@ -37,25 +40,17 @@ export const NavBarZ = ({ clearUser, isAuthenticated }) => {
                     <Nav expand="false">
                         <div className="navcontain">
                             {isAuthenticated ?
-                                // <Link to="/home">HOME</Link>
-                                // : null}
-
                                 <Nav.Link href="/home">HOME</Nav.Link>
                                 : null}
-
                             {isAuthenticated ?
-                                // <Link to="/drills">DRILLS</Link>
                                 <Nav.Link href="/drills">DRILLS</Nav.Link>
                                 : null}
                             {isAuthenticated ?
-                                // <Link to="/contacts">CONTACTS</Link>
                                 <Nav.Link href="/contacts">CONTACTS</Nav.Link>
                                 : null}
                             {isAuthenticated ?
-                                <Nav.Link href="/login" onClick={handleLogout}>LOGOUT</Nav.Link>
+                                <Nav.Link onClick={handleLogout}>LOGOUT</Nav.Link>
                                 : null}
-
-
                         </div>
                     </Nav>
                 </Navbar.Collapse>
