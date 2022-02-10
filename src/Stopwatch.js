@@ -82,11 +82,11 @@ export const Stopwatch = ({ setStartTime, setEndTime }) => {
                         <Button variant="danger" onClick={handleStop}>Stop</Button>
                     </div>
                 </div>
-                <div className="drill_progress_contain_stop">
+                {/* <div className="drill_progress_contain_stop">
                     <div className="drill_progress">
                         <p>Press Stop when done</p>
                     </div>
-                </div>
+                </div> */}
 
 
             </div>

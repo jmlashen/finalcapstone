@@ -21,13 +21,13 @@
   ],
   "drill_logs": [
     {
+      "id": 3,
       "drill_typeId": 1,
       "adminId": 1,
       "start_time": "Tue Jan 18 2022 2:34 pm",
       "end_time": "Tue Jan 18 2022 2:36 pm",
       "light_check_status": true,
-      "notes": "",
-      "id": 3
+      "notes": "This drill went great! All the staff and students evacuated safely and quickly without any hang-ups."
     },
     {
       "drill_typeId": 1,
@@ -46,6 +46,33 @@
       "light_check_status": true,
       "notes": "",
       "id": 1
+    },
+    {
+      "drill_typeId": 1,
+      "adminId": 1,
+      "start_time": "Wed Feb 09 2022 2:11 pm",
+      "end_time": "Wed Feb 09 2022 2:12 pm",
+      "light_check_status": true,
+      "notes": "",
+      "id": 4
+    },
+    {
+      "drill_typeId": 2,
+      "adminId": 3,
+      "start_time": "Thu Feb 10 2022 1:52 pm",
+      "end_time": "Thu Feb 10 2022 1:52 pm",
+      "light_check_status": true,
+      "notes": "Test Drill",
+      "id": 5
+    },
+    {
+      "drill_typeId": 3,
+      "adminId": 3,
+      "start_time": "Thu Feb 10 2022 1:53 pm",
+      "end_time": "Thu Feb 10 2022 1:53 pm",
+      "light_check_status": true,
+      "notes": "Test Drill",
+      "id": 6
     }
   ],
   "drill_types": [
