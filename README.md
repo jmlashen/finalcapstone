@@ -1,7 +1,7 @@
 ZKHOOL: Final Capstone Project 
 
-## Try it out!
-* [Login: user@zkhool.me Pass: Cullabies713](https://zkhool.herokuapp.com/login)
+## Try it out! Login: user@zkhool.me Pass: Cullabies713
+* [https://zkhool.herokuapp.com/login]()
 
 ## View my UX/UI Planning Process and Case Study in Figma
 * [Case Study](https://www.figma.com/proto/RURS8HzpA1C3o7l1RbOtyk/ZKHOOL-PRESENTATION?page-id=0%3A1&node-id=1%3A583&viewport=241%2C48%2C0.03&scaling=contain&starting-point-node-id=1%3A583&show-proto-sidebar=1)
